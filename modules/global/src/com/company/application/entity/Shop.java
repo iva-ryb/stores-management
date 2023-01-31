@@ -4,11 +4,10 @@ import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 
 @Table(name = "APPLICATION_SHOP")
 @Entity(name = "application_Shop")
-@NamePattern("%s %s|name,number")
+@NamePattern("%s %s|name, number")
 public class Shop extends StandardEntity {
     private static final long serialVersionUID = 2078988562490126540L;
 
@@ -19,7 +18,7 @@ public class Shop extends StandardEntity {
     private String name;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "STORE_CHAIN_ID", nullable = false)
+    @JoinColumn(name = "STORE_CHAIN_ID")
     private StoreChain storeChain;
 
     public String getNumber() {

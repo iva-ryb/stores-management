@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
 
+    <view entity="application_Shop" name="shop-view"/>
+    <view entity="application_Product" name="product-view"/>
+    <view entity="application_Manufacturer" name="manufacturer-view"/>
+    <view entity="sec$User" name="user-view"/>
 </views>
