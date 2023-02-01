@@ -46,7 +46,7 @@ create table APPLICATION_PRODUCT (
     --
     NAME varchar(255) not null,
     MANUFACTURER_ID uuid not null,
-    PRICE_FROM_MANUFACTURER decimal(19, 2),
+    PRICE_FROM_MANUFACTURER decimal(19, 2) not null,
     --
     primary key (ID)
 )^

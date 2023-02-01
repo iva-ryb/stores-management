@@ -7,7 +7,9 @@
     <data readOnly="true">
         <collection id="shopsDc"
                     class="com.company.application.entity.Shop">
-            <view extends="_local"/>
+            <view extends="_local">
+                <property name="storeChain" view="_minimal"/>
+            </view>
             <loader id="shopsDl">
                 <query>
                     <![CDATA[select e from application_Shop e]]>

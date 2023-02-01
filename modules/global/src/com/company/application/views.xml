@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
-
-    <view entity="application_Shop" name="shop-view"/>
-    <view entity="application_Product" name="product-view"/>
-    <view entity="application_Manufacturer" name="manufacturer-view"/>
-    <view entity="sec$User" name="user-view"/>
+    <view entity="application_Manufacturer" name="manufacturer-view" extends="_local">
+        <property name="user" view="_minimal"/>
+    </view>
+    <view entity="application_Product" name="product-view" extends="_local">
+        <property name="manufacturer" view="_minimal">
+            <property name="name"/>
+            <property name="user" view="_minimal"/>
+        </property>
+    </view>
+    <view entity="application_Shop" name="shop-view" extends="_local">
+        <property name="storeChain" view="_minimal">
+            <property name="fullName"/>
+            <property name="name"/>
+        </property>
+    </view>
+    <view entity="application_StoreChain" name="storeChain-view" extends="_local"/>
 </views>
