@@ -22,7 +22,8 @@ public class Manufacturer extends StandardEntity {
     @JoinColumn(name = "USER_ID")
     private User user;
 
-    @OneToOne(fetch = FetchType.LAZY, optional = false, mappedBy = "id")
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "ADDRESS_ID")
     private Address address;
 
     public Address getAddress() {

@@ -22,11 +22,13 @@ public class Shop extends StandardEntity {
     @JoinColumn(name = "STORE_CHAIN_ID")
     private StoreChain storeChain;
 
-    @OneToOne(fetch = FetchType.LAZY, optional = false, mappedBy = "id")
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "ADDRESS_ID")
     private Address address;
 
     @OneToMany(mappedBy = "shop", fetch = FetchType.LAZY)
     private List<ListOfProducts> listOfProducts;
+
     public Address getAddress() {
         return address;
     }

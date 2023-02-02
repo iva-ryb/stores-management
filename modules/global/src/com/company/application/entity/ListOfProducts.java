@@ -11,17 +11,19 @@ import java.math.BigDecimal;
 public class ListOfProducts extends StandardEntity {
     private static final long serialVersionUID = -3762454563574648072L;
 
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "id")
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "SHOP_ID")
     private Shop shop;
 
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "id")
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "PRODUCT_ID")
     private Product product;
 
     @NotNull
     @Column(name = "PRICE", nullable = false)
     private BigDecimal price;
 
-    @Column(name = "Column")
+    @Column(name = "COUNT")
     private Integer count;
 
     public Shop getShop() {

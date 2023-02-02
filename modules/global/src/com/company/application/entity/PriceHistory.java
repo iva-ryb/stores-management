@@ -17,11 +17,13 @@ public class PriceHistory extends StandardEntity {
     private Date dateOfPriceChange;
 
     @NotNull
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "id")
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "PRODUCT_ID")
     private Product product;
 
     @NotNull
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "id")
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "SHOP_ID")
     private Shop shop;
 
     public Product getProduct() {

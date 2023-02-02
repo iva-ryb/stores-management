@@ -4,8 +4,8 @@
         <item screen="application_StoreChain.browse" caption="mainMsg://menu_config.application_StoreChain.browse"/>
     </menu>
     <menu id="managementProduction" insertBefore="administration" caption="mainMsg://menu_config.application-managementProduction">
-        <item screen="application_Shop.browse" caption="mainMsg://menu_config.application_Shop.browse"/>
         <item screen="application_Manufacturer.browse" caption="mainMsg://menu_config.application_Manufacturer.browse"/>
-        <item screen="application_Product.browse" caption="mainMsg://menu_config.application_Product.browse"/>
     </menu>
+    <item insertBefore="administration" screen="application_Product.browse" caption="mainMsg://menu_config.application_Product.browse"/>
+    <item insertBefore="administration" screen="application_Shop.browse" caption="mainMsg://menu_config.application_Shop.browse"/>
 </menu-config>
