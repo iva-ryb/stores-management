@@ -9,11 +9,22 @@
             <property name="user" view="_minimal"/>
         </property>
     </view>
-    <view entity="application_Shop" name="shop-view" extends="_local">
-        <property name="storeChain" view="_minimal">
-            <property name="fullName"/>
-            <property name="name"/>
+    <view entity="application_StoreChain" name="storeChain-view" extends="_local"/>
+    <view entity="application_Purchase" name="purchase-view" extends="_local">
+        <property name="shop" view="_minimal"/>
+        <property name="products" view="_minimal">
+            <property name="product" view="_minimal">
+                <property name="name"/>
+            </property>
+            <property name="price"/>
+            <property name="count"/>
         </property>
     </view>
-    <view entity="application_StoreChain" name="storeChain-view" extends="_local"/>
+    <view entity="application_Shop" name="shop-view" extends="_local">
+        <property name="address" view="_minimal">
+            <property name="city"/>
+            <property name="street"/>
+            <property name="house"/>
+        </property>
+    </view>
 </views>

@@ -1,13 +1,15 @@
 package com.company.application.entity;
 
+import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Table(name = "APPLICATION_ADRESS")
-@Entity(name = "application_Adress")
+@Table(name = "APPLICATION_ADDRESS")
+@Entity(name = "application_Address")
+@NamePattern("%s %s %s|city,street,house")
 public class Address extends StandardEntity {
     private static final long serialVersionUID = -1338983138586517789L;
 

@@ -4,10 +4,11 @@ import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 import java.util.Map;
 
-@Table(name = "APPLICATION_PERCHASE")
-@Entity(name = "application_Perchase")
+@Table(name = "APPLICATION_PURCHASE")
+@Entity(name = "application_Purchase")
 public class Purchase extends StandardEntity {
     private static final long serialVersionUID = -3528418992981867835L;
 
@@ -16,9 +17,9 @@ public class Purchase extends StandardEntity {
     @JoinColumn(name = "SHOP_ID")
     private Shop shop;
 
-    @NotNull
-    @Column(name = "PRODUCTS", nullable = false)
-    private Map<String, Integer> products;
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "LIST_OF_PRODUCTS_ID")
+    private List<ListOfProducts> products;
 
     public Shop getShop() {
         return shop;
@@ -28,11 +29,11 @@ public class Purchase extends StandardEntity {
         this.shop = shop;
     }
 
-    public Map<String, Integer> getProducts() {
+    public List<ListOfProducts> getProducts() {
         return products;
     }
 
-    public void setProducts(Map<String, Integer> products) {
+    public void setProducts(List<ListOfProducts> products) {
         this.products = products;
     }
 }

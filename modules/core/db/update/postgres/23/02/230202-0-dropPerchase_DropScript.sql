@@ -1,0 +1,1 @@
+drop table if exists APPLICATION_PERCHASE__U71798 cascade ;

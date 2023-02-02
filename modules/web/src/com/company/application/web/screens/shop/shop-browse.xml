@@ -9,6 +9,7 @@
                     class="com.company.application.entity.Shop">
             <view extends="_local">
                 <property name="storeChain" view="_minimal"/>
+                <property name="address" view="_minimal"/>
             </view>
             <loader id="shopsDl">
                 <query>
@@ -38,6 +39,7 @@
                 <column id="number" caption="msg://numberField.caption"/>
                 <column id="name" caption="msg://nameField.caption"/>
                 <column id="storeChain" caption="msg://storeChainField.caption"/>
+                <column id="address" caption="msg://addressField.caption"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"

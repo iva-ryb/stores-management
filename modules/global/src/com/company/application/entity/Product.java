@@ -13,11 +13,11 @@ public class Product extends StandardEntity {
     @Column(name = "NAME", nullable = false, unique = true)
     private String name;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MANUFACTURER_ID")
     private Manufacturer manufacturer;
 
-    @Column(name = "PRICE_FROM_MANUFACTURER", unique = true, nullable = false)
+    @Column(name = "PRICE_FROM_MANUFACTURER", unique = true)
     private BigDecimal priceFromManufacturer;
 
     public String getName() {

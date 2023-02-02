@@ -11,12 +11,11 @@ import java.math.BigDecimal;
 public class ListOfProducts extends StandardEntity {
     private static final long serialVersionUID = -3762454563574648072L;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SHOP_ID")
     private Shop shop;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "PRODUCT_ID")
+    @OneToOne(cascade = CascadeType.ALL)
     private Product product;
 
     @NotNull
