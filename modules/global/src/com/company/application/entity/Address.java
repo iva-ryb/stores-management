@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Table(name = "APPLICATION_ADDRESS")
 @Entity(name = "application_Address")
-@NamePattern("%s %s %s|city,street,house")
+@NamePattern("%s %s %s|city,street,building")
 public class Address extends StandardEntity {
     private static final long serialVersionUID = -1338983138586517789L;
 
@@ -19,15 +19,15 @@ public class Address extends StandardEntity {
     @Column(name = "STREET")
     private String street;
 
-    @Column(name = "HOUSE")
-    private String house;
+    @Column(name = "BUILDING")
+    private String building;
 
-    public String getHouse() {
-        return house;
+    public String getBuilding() {
+        return building;
     }
 
-    public void setHouse(String house) {
-        this.house = house;
+    public void setBuilding(String building) {
+        this.building = building;
     }
 
     public String getStreet() {

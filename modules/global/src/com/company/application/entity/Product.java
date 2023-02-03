@@ -1,5 +1,6 @@
 package com.company.application.entity;
 
+import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.*;
@@ -7,6 +8,7 @@ import java.math.BigDecimal;
 
 @Table(name = "APPLICATION_PRODUCT")
 @Entity(name = "application_Product")
+@NamePattern("%s|name")
 public class Product extends StandardEntity {
     private static final long serialVersionUID = -1147949572157470160L;
 
@@ -14,11 +16,11 @@ public class Product extends StandardEntity {
     private String name;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "MANUFACTURER_ID")
-    private Manufacturer manufacturer;
+    @JoinColumn(name = "RETAILER_ID")
+    private Retailer retailer;
 
-    @Column(name = "PRICE_FROM_MANUFACTURER", unique = true)
-    private BigDecimal priceFromManufacturer;
+    @Column(name = "PRICE_FROM_RETAILER", unique = true)
+    private BigDecimal priceFromRetailer;
 
     public String getName() {
         return name;
@@ -28,19 +30,19 @@ public class Product extends StandardEntity {
         this.name = name;
     }
 
-    public Manufacturer getManufacturer() {
-        return manufacturer;
+    public Retailer getRetailer() {
+        return retailer;
     }
 
-    public void setManufacturer(Manufacturer manufacturer) {
-        this.manufacturer = manufacturer;
+    public void setRetailer(Retailer retailer) {
+        this.retailer = retailer;
     }
 
-    public BigDecimal getPriceFromManufacturer() {
-        return priceFromManufacturer;
+    public BigDecimal getPriceFromRetailer() {
+        return priceFromRetailer;
     }
 
-    public void setPriceFromManufacturer(BigDecimal priceFromManufacturer) {
-        this.priceFromManufacturer = priceFromManufacturer;
+    public void setPriceFromRetailer(BigDecimal priceFromRetailer) {
+        this.priceFromRetailer = priceFromRetailer;
     }
 }

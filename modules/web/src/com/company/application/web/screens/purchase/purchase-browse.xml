@@ -8,7 +8,7 @@
         <collection id="purchasesDc"
                     class="com.company.application.entity.Purchase">
             <view extends="_local">
-                <property name="shop" view="_minimal"/>
+                <property name="store" view="_minimal"/>
                 <property name="products" view="_minimal">
                     <property name="product" view="_minimal">
                         <property name="name"/>
@@ -42,7 +42,7 @@
                 <action id="remove" type="remove"/>
             </actions>
             <columns>
-                <column id="shop.name" caption="msg://shopNameField.caption"/>
+                <column id="store.name" caption="msg://shopNameField.caption"/>
                 <column id="products.product.name" caption="msg://productNameField.caption"/>
                 <column id="products.price" caption="msg://productPrice.caption"/>
                 <column id="products.count" caption="msg://productCount.caption"/>

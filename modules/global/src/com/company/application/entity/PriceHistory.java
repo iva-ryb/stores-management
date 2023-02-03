@@ -24,7 +24,7 @@ public class PriceHistory extends StandardEntity {
     @NotNull
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SHOP_ID")
-    private Shop shop;
+    private Store store;
 
     public Product getProduct() {
         return product;
@@ -34,12 +34,12 @@ public class PriceHistory extends StandardEntity {
         this.product = product;
     }
 
-    public Shop getShop() {
-        return shop;
+    public Store getShop() {
+        return store;
     }
 
-    public void setShop(Shop shop) {
-        this.shop = shop;
+    public void setShop(Store store) {
+        this.store = store;
     }
 
     public Date getDateOfPriceChange() {
