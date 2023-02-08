@@ -25,5 +25,4 @@ public class ProducerEdit extends StandardEditor<Producer> {
         event.getEntity().setAddress(dataManager.create(Address.class));
     }
 
-
 }

@@ -26,7 +26,7 @@ public class Product extends StandardEntity {
     private Producer producer;
 
     @NotNull
-    @Column(name = "PRICE_FROM_PRODUCER", unique = true)
+    @Column(name = "PRICE_FROM_PRODUCER")
     private BigDecimal priceFromProducer;
 
     public String getName() {

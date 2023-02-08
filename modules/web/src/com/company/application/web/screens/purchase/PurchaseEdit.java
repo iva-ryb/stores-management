@@ -1,11 +1,8 @@
 package com.company.application.web.screens.purchase;
 
 import com.company.application.entity.PurchaseProduct;
-import com.company.application.entity.Store;
 import com.company.application.entity.StoreProduct;
 import com.haulmont.cuba.gui.Notifications;
-import com.haulmont.cuba.gui.components.HasValue;
-import com.haulmont.cuba.gui.components.PickerField;
 import com.haulmont.cuba.gui.model.CollectionPropertyContainer;
 import com.haulmont.cuba.gui.model.DataContext;
 import com.haulmont.cuba.gui.screen.*;
@@ -50,7 +47,7 @@ public class PurchaseEdit extends StandardEditor<Purchase> {
             return;
         }
         boolean notEnoughAmount = false;
-        StringBuilder notEnoughAmountMessage = new StringBuilder("The following products doesn't have required amount in the store: ");
+        StringBuilder notEnoughAmountMessage = new StringBuilder("The following products doesn't have required count in the store: ");
         for (PurchaseProduct purchaseProduct : purchaseProducts) {
             StoreProduct storeProduct = getEditedEntity().getStore().getStoreProducts().stream()
                     .filter(storeProduct1 -> storeProduct1.getProduct().equals(purchaseProduct.getProduct()))

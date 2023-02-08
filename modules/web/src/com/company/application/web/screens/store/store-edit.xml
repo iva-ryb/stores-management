@@ -38,7 +38,7 @@
             </tab>
             <tab id="productsTab" caption="msg://productsTab.caption" margin="true,false,false,false" spacing="true">
                 <groupBox id="storeProductsBox" caption="msg://productsTab.caption">
-                    <table id="storeProductsTable" dataContainer="storeProductDc" width="100%" height="200px">
+                    <table id="storeProductsTable" dataContainer="storeProductDc" width="100%" height="auto">
                         <actions>
                             <action id="create" type="create">
                                 <properties>
