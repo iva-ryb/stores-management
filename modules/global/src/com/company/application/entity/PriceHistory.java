@@ -1,29 +1,37 @@
 package com.company.application.entity;
 
 import com.haulmont.cuba.core.entity.StandardEntity;
+import com.haulmont.cuba.core.entity.annotation.OnDeleteInverse;
+import com.haulmont.cuba.core.global.DeletePolicy;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.Date;
+import java.math.BigDecimal;
+import java.time.LocalDate;
 
 @Table(name = "APPLICATION_PRICE_HISTORY")
 @Entity(name = "application_PriceHistory")
 public class PriceHistory extends StandardEntity {
     private static final long serialVersionUID = 8382972737943931709L;
 
-    @Temporal(TemporalType.DATE)
     @NotNull
-    @Column(name = "DATE_OF_PRICE_CHANGE", nullable = false)
-    private Date dateOfPriceChange;
+    @Column(name = "PRICE", nullable = false)
+    private BigDecimal price;
 
     @NotNull
-    @OneToOne(fetch = FetchType.LAZY)
+    @Column(name = "DATE", nullable = false)
+    private LocalDate date;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "PRODUCT_ID")
+    @OnDeleteInverse(DeletePolicy.CASCADE)
+    @NotNull
     private Product product;
 
     @NotNull
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "SHOP_ID")
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "STORE_ID")
+    @OnDeleteInverse(DeletePolicy.CASCADE)
     private Store store;
 
     public Product getProduct() {
@@ -34,19 +42,27 @@ public class PriceHistory extends StandardEntity {
         this.product = product;
     }
 
-    public Store getShop() {
+    public Store getStore() {
         return store;
     }
 
-    public void setShop(Store store) {
+    public void setStore(Store store) {
         this.store = store;
     }
 
-    public Date getDateOfPriceChange() {
-        return dateOfPriceChange;
+    public BigDecimal getPrice() {
+        return price;
     }
 
-    public void setDateOfPriceChange(Date dateOfPriceChange) {
-        this.dateOfPriceChange = dateOfPriceChange;
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 }

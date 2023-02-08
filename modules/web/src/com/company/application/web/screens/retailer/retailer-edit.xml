@@ -6,7 +6,7 @@
     <data>
         <instance id="retailerDc"
                   class="com.company.application.entity.Retailer">
-            <view extends="retailer-view"/>
+            <view extends="_local"/>
             <loader/>
         </instance>
     </data>
@@ -15,20 +15,8 @@
     <layout expand="editActions" spacing="true">
         <form id="form" dataContainer="retailerDc">
             <column width="350px">
-                <textField id="nameField" property="name"/>
-                <textField id="fullNameField" property="fullName"/>
-                <pickerField id="userField" property="user">
-                    <actions>
-                        <action id="lookup" type="picker_lookup"/>
-                        <action id="clear" type="picker_clear"/>
-                    </actions>
-                </pickerField>
-                <pickerField id="addressField" property="address">
-                    <actions>
-                        <action id="lookup" type="picker_lookup"/>
-                        <action id="clear" type="picker_clear"/>
-                    </actions>
-                </pickerField>
+                <textField id="nameField" property="name" caption="msg://retailerNameField.caption"/>
+                <textField id="fullNameField" property="fullName" caption="msg://retailerFullNameField.caption"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">

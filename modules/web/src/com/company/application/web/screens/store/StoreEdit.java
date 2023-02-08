@@ -21,15 +21,12 @@ public class StoreEdit extends StandardEditor<Store> {
     private CollectionPropertyContainer<StoreProduct> storeProductDc;
 
     @Inject
-    private DataManager dataManager;
-
-    @Inject
     private DataContext dataContext;
 
     @Install(to = "storeProductsTable.create", subject = "afterCommitHandler")
     private void storeProductsTableCreateAfterCommitHandler(StoreProduct addedProduct) {
         List<StoreProduct> storeProducts = storeProductDc.getMutableItems();
-        for (int i = 0; i < storeProducts.size(); i++) {
+        for (int i = 0; i < storeProducts.size() - 1; i++) {
             StoreProduct existingProduct = storeProducts.get(i);
             if (existingProduct.getProduct().getId() == addedProduct.getProduct().getId()) {
                 existingProduct.setCount(existingProduct.getCount() + addedProduct.getCount());
@@ -39,8 +36,4 @@ public class StoreEdit extends StandardEditor<Store> {
         }
     }
 
-    @Subscribe
-    public void onInitEntity(InitEntityEvent<Store> event) {
-        event.getEntity().setAddress(dataManager.create(Address.class));
-    }
 }

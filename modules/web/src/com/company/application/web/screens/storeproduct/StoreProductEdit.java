@@ -2,6 +2,8 @@ package com.company.application.web.screens.storeproduct;
 
 import com.company.application.entity.Product;
 import com.haulmont.cuba.core.global.DataManager;
+import com.haulmont.cuba.gui.components.HasValue;
+import com.haulmont.cuba.gui.components.Label;
 import com.haulmont.cuba.gui.components.PickerField;
 import com.haulmont.cuba.gui.screen.*;
 import com.company.application.entity.StoreProduct;

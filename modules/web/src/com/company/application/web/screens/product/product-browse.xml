@@ -8,7 +8,7 @@
         <collection id="productsDc"
                     class="com.company.application.entity.Product">
             <view extends="_local">
-                <property name="retailer" view="_minimal"/>
+                <property name="producer" view="_minimal"/>
             </view>
             <loader id="productsDl">
                 <query>
@@ -36,8 +36,8 @@
             </actions>
             <columns>
                 <column id="name" caption="msg://nameField.caption"/>
-                <column id="priceFromRetailer" caption="msg://priceFromManufacturer.caption"/>
-                <column id="retailer" caption="msg://manufacturerField.caption"/>
+                <column id="priceFromProducer" caption="msg://priceFromManufacturer.caption"/>
+                <column id="producer" caption="msg://manufacturerField.caption"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"

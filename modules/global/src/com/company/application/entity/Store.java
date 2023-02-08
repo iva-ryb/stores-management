@@ -1,9 +1,15 @@
 package com.company.application.entity;
 
+import com.haulmont.chile.core.annotations.Composition;
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
+import com.haulmont.cuba.core.entity.annotation.EmbeddedParameters;
+import com.haulmont.cuba.core.entity.annotation.OnDelete;
+import com.haulmont.cuba.core.entity.annotation.OnDeleteInverse;
+import com.haulmont.cuba.core.global.DeletePolicy;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Table(name = "APPLICATION_STORE")
@@ -18,14 +24,18 @@ public class Store extends StandardEntity {
     @Column(name = "NAME", nullable = false)
     private String name;
 
+    @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "STORE_CHAIN_ID")
-    private StoreChain storeChain;
+    @JoinColumn(name = "RETAILER_ID")
+    @OnDeleteInverse(DeletePolicy.CASCADE)
+    private Retailer retailer;
 
-    @OneToOne(fetch = FetchType.LAZY, optional = false, cascade = CascadeType.ALL)
-    @JoinColumn(name = "ADDRESS_ID")
+    @Embedded
+    @EmbeddedParameters(nullAllowed = false)
     private Address address;
 
+    @Composition
+    @OnDelete(DeletePolicy.CASCADE)
     @OneToMany(mappedBy = "store")
     private List<StoreProduct> storeProducts;
 
@@ -53,12 +63,12 @@ public class Store extends StandardEntity {
         this.name = name;
     }
 
-    public StoreChain getStoreChain() {
-        return storeChain;
+    public Retailer getRetailer() {
+        return retailer;
     }
 
-    public void setStoreChain(StoreChain storeChain) {
-        this.storeChain = storeChain;
+    public void setRetailer(Retailer retailer) {
+        this.retailer = retailer;
     }
 
     public List<StoreProduct> getStoreProducts() {

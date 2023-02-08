@@ -10,19 +10,18 @@
             <loader/>
         </instance>
     </data>
-    <dialogMode height="600"
-                width="800"/>
+    <dialogMode height="auto"
+                width="auto"/>
     <layout expand="editActions" spacing="true">
         <form id="form" dataContainer="storeProductDc">
-            <pickerField id="productField" property="product" caption="Product">
+            <pickerField id="productField" property="product" caption="msg://nameProductField.caption">
                 <actions>
                     <action id="lookup" type="picker_lookup"/>
                     <action id="clear" type="picker_clear"/>
                 </actions>
             </pickerField>
-            <textField id="priceField" property="price" caption="Price"/>
-            <label id="producerPriceLabel" value="Producer's price: "/>
-            <textField id="countField" property="count" caption="Amount"/>
+            <textField id="priceField" property="price" caption="msg://priceField.caption"/>
+            <textField id="countField" property="count" caption="msg://countField.caption"/>
         </form>
         <hbox id="editActions" spacing="true">
             <button id="commitAndCloseBtn" action="windowCommitAndClose"/>

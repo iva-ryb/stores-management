@@ -1,6 +1,10 @@
 package com.company.application.entity;
 
+import com.haulmont.chile.core.annotations.Composition;
 import com.haulmont.cuba.core.entity.StandardEntity;
+import com.haulmont.cuba.core.entity.annotation.OnDelete;
+import com.haulmont.cuba.core.entity.annotation.OnDeleteInverse;
+import com.haulmont.cuba.core.global.DeletePolicy;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -12,13 +16,15 @@ public class Purchase extends StandardEntity {
     private static final long serialVersionUID = -3528418992981867835L;
 
     @NotNull
+    @OnDeleteInverse(DeletePolicy.CASCADE)
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "SHOP_ID")
+    @JoinColumn(name = "STORE_ID")
     private Store store;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "LIST_OF_PRODUCTS_ID")
-    private List<StoreProduct> products;
+    @OnDelete(DeletePolicy.CASCADE)
+    @OneToMany(mappedBy = "purchase")
+    @Composition
+    private List<PurchaseProduct> purchaseProducts;
 
     public Store getStore() {
         return store;
@@ -28,11 +34,11 @@ public class Purchase extends StandardEntity {
         this.store = store;
     }
 
-    public List<StoreProduct> getProducts() {
-        return products;
+    public List<PurchaseProduct> getPurchaseProducts() {
+        return purchaseProducts;
     }
 
-    public void setProducts(List<StoreProduct> products) {
-        this.products = products;
+    public void setPurchaseProducts(List<PurchaseProduct> purchaseProducts) {
+        this.purchaseProducts = purchaseProducts;
     }
 }

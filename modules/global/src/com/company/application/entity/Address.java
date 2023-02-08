@@ -1,16 +1,16 @@
 package com.company.application.entity;
 
+import com.haulmont.chile.core.annotations.MetaClass;
 import com.haulmont.chile.core.annotations.NamePattern;
-import com.haulmont.cuba.core.entity.StandardEntity;
+import com.haulmont.cuba.core.entity.EmbeddableEntity;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.Embeddable;
 
-@Table(name = "APPLICATION_ADDRESS")
-@Entity(name = "application_Address")
+@MetaClass(name = "application_Address")
+@Embeddable
 @NamePattern("%s %s %s|city,street,building")
-public class Address extends StandardEntity {
+public class Address extends EmbeddableEntity {
     private static final long serialVersionUID = -1338983138586517789L;
 
     @Column(name = "CITY")

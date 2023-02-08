@@ -6,17 +6,8 @@
         messagesPack="com.company.application.web.screens.purchase">
     <data readOnly="true">
         <collection id="purchasesDc"
-                    class="com.company.application.entity.Purchase">
-            <view extends="_local">
-                <property name="store" view="_minimal"/>
-                <property name="products" view="_minimal">
-                    <property name="product" view="_minimal">
-                        <property name="name"/>
-                    </property>
-                    <property name="price"/>
-                    <property name="count"/>
-                </property>
-            </view>
+                    class="com.company.application.entity.Purchase"
+                    view="purchase-view">
             <loader id="purchasesDl">
                 <query>
                     <![CDATA[select e from application_Purchase e]]>
@@ -42,10 +33,8 @@
                 <action id="remove" type="remove"/>
             </actions>
             <columns>
-                <column id="store.name" caption="msg://shopNameField.caption"/>
-                <column id="products.product.name" caption="msg://productNameField.caption"/>
-                <column id="products.price" caption="msg://productPrice.caption"/>
-                <column id="products.count" caption="msg://productCount.caption"/>
+                <column id="store" caption="msg://storeNameField.caption"/>
+                <column id="purchaseProducts" caption="msg://productNameField.caption"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"

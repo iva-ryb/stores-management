@@ -35,7 +35,7 @@
             <columns>
                 <column id="number" caption="msg://numberField.caption"/>
                 <column id="name" caption="msg://nameField.caption"/>
-                <column id="storeChain" caption="msg://storeChainField.caption"/>
+                <column id="retailer" caption="msg://storeChainField.caption"/>
                 <column id="address" caption="msg://addressField.caption"/>
             </columns>
             <rowsCount/>

@@ -2,8 +2,11 @@ package com.company.application.entity;
 
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
+import com.haulmont.cuba.core.entity.annotation.OnDeleteInverse;
+import com.haulmont.cuba.core.global.DeletePolicy;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 @Table(name = "APPLICATION_PRODUCT")
@@ -12,15 +15,19 @@ import java.math.BigDecimal;
 public class Product extends StandardEntity {
     private static final long serialVersionUID = -1147949572157470160L;
 
+    @NotNull
     @Column(name = "NAME", nullable = false, unique = true)
     private String name;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "RETAILER_ID")
-    private Retailer retailer;
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "PRODUCER_ID")
+    @OnDeleteInverse(DeletePolicy.CASCADE)
+    private Producer producer;
 
-    @Column(name = "PRICE_FROM_RETAILER", unique = true)
-    private BigDecimal priceFromRetailer;
+    @NotNull
+    @Column(name = "PRICE_FROM_PRODUCER", unique = true)
+    private BigDecimal priceFromProducer;
 
     public String getName() {
         return name;
@@ -30,19 +37,19 @@ public class Product extends StandardEntity {
         this.name = name;
     }
 
-    public Retailer getRetailer() {
-        return retailer;
+    public Producer getProducer() {
+        return producer;
     }
 
-    public void setRetailer(Retailer retailer) {
-        this.retailer = retailer;
+    public void setProducer(Producer producer) {
+        this.producer = producer;
     }
 
-    public BigDecimal getPriceFromRetailer() {
-        return priceFromRetailer;
+    public BigDecimal getPriceFromProducer() {
+        return priceFromProducer;
     }
 
-    public void setPriceFromRetailer(BigDecimal priceFromRetailer) {
-        this.priceFromRetailer = priceFromRetailer;
+    public void setPriceFromProducer(BigDecimal priceFromProducer) {
+        this.priceFromProducer = priceFromProducer;
     }
 }

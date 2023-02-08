@@ -7,5 +7,5 @@ import com.company.application.entity.Retailer;
 @UiDescriptor("retailer-browse.xml")
 @LookupComponent("retailersTable")
 @LoadDataBeforeShow
-public class RetailerBrowse extends MasterDetailScreen<Retailer> {
+public class RetailerBrowse extends StandardLookup<Retailer> {
 }
