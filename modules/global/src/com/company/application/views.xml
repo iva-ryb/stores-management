@@ -29,7 +29,12 @@
         <property name="product" view="_minimal">
             <property name="priceFromProducer"/>
         </property>
-        <property name="store" view="_minimal"/>
+        <property name="store" view="_minimal">
+            <property name="storeProducts" view="_minimal">
+                <property name="store" view="store-view"/>
+                <property name="product" view="product-view"/>
+            </property>
+        </property>
     </view>
     <view entity="application_Purchase" name="purchase-view" extends="_local">
         <property name="store" view="_minimal">
@@ -45,7 +50,12 @@
             <property name="producer" view="_minimal"/>
         </property>
         <property name="purchase" view="_minimal">
-            <property name="store" view="_minimal"/>
+            <property name="store" view="_minimal">
+                <property name="storeProducts" view="storeProduct-view">
+                    <property name="store" view="_minimal"/>
+                    <property name="product" view="_minimal"/>
+                </property>
+            </property>
         </property>
     </view>
 </views>
