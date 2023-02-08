@@ -32,7 +32,12 @@
         <property name="store" view="_minimal"/>
     </view>
     <view entity="application_Purchase" name="purchase-view" extends="_local">
-        <property name="store" view="_minimal"/>
+        <property name="store" view="_minimal">
+            <property name="storeProducts" view="_minimal">
+                <property name="product" view="_minimal"/>
+                <property name="count"/>
+            </property>
+        </property>
         <property name="purchaseProducts" view="_minimal"/>
     </view>
     <view entity="application_PurchaseProduct" name="purchaseProduct-view" extends="_local">

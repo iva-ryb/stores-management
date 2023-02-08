@@ -1,7 +1,9 @@
 package com.company.application.web.screens.store;
 
 import com.company.application.entity.Producer;
+import com.company.application.entity.Retailer;
 import com.company.application.web.ProducerOption;
+import com.company.application.web.RetailerOption;
 import com.haulmont.cuba.core.global.DataManager;
 import com.haulmont.cuba.gui.model.CollectionContainer;
 import com.haulmont.cuba.gui.model.CollectionLoader;
@@ -31,11 +33,11 @@ public class StoreBrowse extends StandardLookup<Store> {
     public void onInit(InitEvent event) {
         ScreenOptions screenOptions = event.getOptions();
         if (screenOptions instanceof ProducerOption) {
-            Producer producer = ((ProducerOption) screenOptions).getProducer();
+            Retailer retailer = ((RetailerOption) screenOptions).getRetailer();
             List<Store> stores = dataManager.load(Store.class).
-                    query("select e from application_Store e where e.producer = :producer")
+                    query("select e from application_Store e where e.retailer = :retailer")
                     .view("store-view")
-                    .parameter("producer", producer)
+                    .parameter("retailer", retailer)
                     .list();
             for (Store store : stores) {
                 storeList.add(store.getId());
