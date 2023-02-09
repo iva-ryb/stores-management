@@ -1,13 +1,16 @@
 package com.company.application.web.screens.store;
 
-import com.company.application.entity.Address;
+import com.company.application.config.ProductConfig;
 import com.company.application.entity.Store;
 import com.company.application.entity.StoreProduct;
-import com.haulmont.cuba.core.global.DataManager;
+import com.haulmont.cuba.core.global.AppBeans;
+import com.haulmont.cuba.core.global.Configuration;
+import com.haulmont.cuba.gui.components.Table;
 import com.haulmont.cuba.gui.model.CollectionPropertyContainer;
 import com.haulmont.cuba.gui.model.DataContext;
 import com.haulmont.cuba.gui.screen.*;
 
+import javax.annotation.Nullable;
 import javax.inject.Inject;
 import java.util.List;
 
@@ -19,9 +22,28 @@ public class StoreEdit extends StandardEditor<Store> {
 
     @Inject
     private CollectionPropertyContainer<StoreProduct> storeProductDc;
-
     @Inject
     private DataContext dataContext;
+
+    @Inject
+    private ProductConfig productConfig;
+
+    @Inject
+    private Table<StoreProduct> storeProductsTable;
+
+    @Subscribe
+    public void onInit(InitEvent event) {
+        storeProductsTable.setStyleProvider(new Table.StyleProvider<StoreProduct>() {
+            @Nullable
+            @Override
+            public String getStyleName(StoreProduct entity, @Nullable String property) {
+                if (entity.getCount() < productConfig.getCount()) {
+                    return "premium-grade";
+                }
+                return null;
+            }
+        });
+    }
 
     @Install(to = "storeProductsTable.create", subject = "afterCommitHandler")
     private void storeProductsTableCreateAfterCommitHandler(StoreProduct addedProduct) {
