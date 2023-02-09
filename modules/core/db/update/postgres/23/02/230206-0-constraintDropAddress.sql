@@ -1,0 +1,2 @@
+alter table application_retailer drop constraint FK_APPLICATION_RETAILER_ON_ADDRESS ;
+alter table application_store drop constraint FK_APPLICATION_STORE_ON_ADDRESS ;

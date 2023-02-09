@@ -1,0 +1,3 @@
+alter table application_price_history drop constraint FK_APPLICATION_PRICE_HISTORY_ON_SHOP ;
+alter table application_purchase drop constraint FK_APPLICATION_PURCHASE_ON_SHOP ;
+alter table application_store_product drop constraint FK_APPLICATION_STORE_PRODUCT_ON_SHOP ;

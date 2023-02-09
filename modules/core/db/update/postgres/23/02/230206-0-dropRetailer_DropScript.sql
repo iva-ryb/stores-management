@@ -1,0 +1,1 @@
+drop table if exists APPLICATION_RETAILER__U01614 cascade ;

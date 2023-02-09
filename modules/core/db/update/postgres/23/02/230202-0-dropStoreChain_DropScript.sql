@@ -1,0 +1,1 @@
+drop table if exists APPLICATION_STORE_CHAIN__U73502 cascade ;
