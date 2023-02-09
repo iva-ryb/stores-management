@@ -9,7 +9,7 @@ import com.haulmont.cuba.core.config.SourceType;
 @Source(type = SourceType.DATABASE)
 public interface ProductConfig extends Config {
 
-    @Property("application_StoreProduct.count")
+    @Property("count of product in the store")
     int getCount();
 
     void setCount(int count);
