@@ -3,8 +3,6 @@ package com.company.application.web.screens.store;
 import com.company.application.config.ProductConfig;
 import com.company.application.entity.Store;
 import com.company.application.entity.StoreProduct;
-import com.haulmont.cuba.core.global.AppBeans;
-import com.haulmont.cuba.core.global.Configuration;
 import com.haulmont.cuba.gui.components.Table;
 import com.haulmont.cuba.gui.model.CollectionPropertyContainer;
 import com.haulmont.cuba.gui.model.DataContext;
