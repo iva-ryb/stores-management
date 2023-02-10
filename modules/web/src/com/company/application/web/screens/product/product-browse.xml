@@ -37,7 +37,7 @@
             <columns>
                 <column id="name" caption="msg://nameField.caption"/>
                 <column id="priceFromProducer" caption="msg://priceFromProducer.caption"/>
-                <column id="producer" caption="msg://manufacturerField.caption"/>
+                <column id="producer" caption="msg://producerField.caption"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
