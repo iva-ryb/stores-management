@@ -14,7 +14,7 @@ import java.util.List;
 
 @Table(name = "APPLICATION_STORE")
 @Entity(name = "application_Store")
-@NamePattern("%s %s|number, name")
+@NamePattern("%s|name")
 public class Store extends StandardEntity {
     private static final long serialVersionUID = 2078988562490126540L;
 
