@@ -58,4 +58,8 @@
             </property>
         </property>
     </view>
+    <view entity="application_ProductWhoseAmountIsLessThan" name="productWhoseAmountIsLessThan-view" extends="_local">
+        <property name="product" view="_minimal"/>
+        <property name="count"/>
+    </view>
 </views>
