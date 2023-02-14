@@ -1,12 +1,7 @@
 package com.company.application.entity;
 
-import com.byteowls.jopencage.JOpenCageGeocoder;
-import com.byteowls.jopencage.model.JOpenCageForwardRequest;
-import com.byteowls.jopencage.model.JOpenCageLatLng;
-import com.byteowls.jopencage.model.JOpenCageResponse;
 import com.haulmont.addon.maps.gis.Geometry;
 import com.haulmont.addon.maps.gis.converters.wkt.CubaPointWKTConverter;
-import com.haulmont.addon.maps.gis.utils.GeometryUtils;
 import com.haulmont.chile.core.annotations.Composition;
 import com.haulmont.chile.core.annotations.MetaProperty;
 import com.haulmont.chile.core.annotations.NamePattern;
@@ -15,9 +10,7 @@ import com.haulmont.cuba.core.entity.annotation.EmbeddedParameters;
 import com.haulmont.cuba.core.entity.annotation.OnDelete;
 import com.haulmont.cuba.core.entity.annotation.OnDeleteInverse;
 import com.haulmont.cuba.core.global.DeletePolicy;
-import org.locationtech.jts.geom.Coordinate;
 import org.locationtech.jts.geom.Point;
-import org.locationtech.jts.geom.PrecisionModel;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -27,7 +20,6 @@ import java.util.List;
 @Entity(name = "application_Store")
 @NamePattern("%s|name")
 public class Store extends StandardEntity {
-    private static final String API_KEY_OPEN_CAGE = "80990c70fcec453faec21d3cf27a11d7";
     private static final long serialVersionUID = 2078988562490126540L;
 
     @Column(name = "NUMBER", nullable = false, unique = true)

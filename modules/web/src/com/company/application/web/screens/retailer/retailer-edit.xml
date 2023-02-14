@@ -3,12 +3,15 @@
         caption="msg://retailerEdit.caption"
         focusComponent="form"
         messagesPack="com.company.application.web.screens.retailer"
-        xmlns:maps="http://schemas.haulmont.com/maps/0.1/ui-component.xsd">
+        xmlns:maps="http://schemas.haulmont.com/maps/0.1/ui-component.xsd"
+        xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
     <data>
         <instance id="retailerDc"
                   class="com.company.application.entity.Retailer">
             <view extends="retailer-view"/>
-            <collection id="storesDc" property="stores"/>
+            <collection id="storesDc" property="stores">
+                <collection id="storeProductsDc" property="storeProducts"/>
+            </collection>
             <loader/>
         </instance>
     </data>
@@ -33,7 +36,18 @@
                 </maps:geoMap>
             </tab>
             <tab id="profitStructureTab" caption="msg://profitStructureTab.caption" margin="true,false,false,false" spacing="true">
+                <chart:pieChart id="pieChart"
+                                dataContainer="storeProductsDc"
+                                height="700px"
+                                titleField="product"
+                                valueField="count"
+                                width="700px">
+                    <chart:legend autoMargins="false"
+                                  marginRight="80"
+                                  markerType="CIRCLE"
+                                  position="RIGHT"/>
 
+                </chart:pieChart>
             </tab>
         </tabSheet>
         <hbox id="editActions" spacing="true">
