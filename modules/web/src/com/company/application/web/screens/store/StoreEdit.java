@@ -55,5 +55,4 @@ public class StoreEdit extends StandardEditor<Store> {
             }
         }
     }
-
 }

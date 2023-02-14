@@ -12,6 +12,7 @@
     </view>
     <view entity="application_Store" name="store-view" extends="_local">
         <property name="retailer" view="_minimal">
+            <property name="name"/>
         </property>
         <property name="address" view="_minimal">
         </property>
@@ -24,7 +25,15 @@
             <property name="count"/>
         </property>
     </view>
-    <view entity="application_Retailer" name="retailer-view" extends="_local"/>
+    <view entity="application_Retailer" name="retailer-view" extends="_local">
+        <property name="stores" view="_minimal">
+            <property name="retailer" view="_minimal"/>
+            <property name="number"/>
+            <property name="location"/>
+            <property name="storeProducts" view="_minimal"/>
+            <property name="address" view="_minimal"/>
+        </property>
+    </view>
     <view entity="application_StoreProduct" name="storeProduct-view" extends="_local">
         <property name="product" view="_minimal">
             <property name="priceFromProducer"/>
