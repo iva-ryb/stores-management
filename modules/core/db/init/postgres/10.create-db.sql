@@ -10,6 +10,7 @@ create table APPLICATION_STORE (
     DELETED_BY varchar(50),
     --
     CITY varchar(255),
+    LOCATION VARCHAR(100),
     STREET varchar(255),
     BUILDING varchar(255),
     --

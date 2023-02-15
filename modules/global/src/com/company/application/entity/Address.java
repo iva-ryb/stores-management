@@ -45,4 +45,12 @@ public class Address extends EmbeddableEntity {
     public void setCity(String city) {
         this.city = city;
     }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "street='" + street + '\'' +
+                ", building='" + building + '\'' +
+                '}';
+    }
 }

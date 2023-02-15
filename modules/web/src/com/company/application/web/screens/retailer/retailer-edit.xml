@@ -2,23 +2,61 @@
 <window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         caption="msg://retailerEdit.caption"
         focusComponent="form"
-        messagesPack="com.company.application.web.screens.retailer">
+        messagesPack="com.company.application.web.screens.retailer"
+        xmlns:maps="http://schemas.haulmont.com/maps/0.1/ui-component.xsd"
+        xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
     <data>
         <instance id="retailerDc"
                   class="com.company.application.entity.Retailer">
-            <view extends="_local"/>
+            <view extends="retailer-view"/>
+            <collection id="storesDc" property="stores">
+            </collection>
             <loader/>
         </instance>
+        <collection id="storeProductsDc" class="com.company.application.entity.StoreProduct">
+            <view extends="_local"/>
+            <loader id="storeProductsDl">
+                <query>
+                    <![CDATA[select e from application_StoreProduct e]]>
+                </query>
+            </loader>
+        </collection>
     </data>
     <dialogMode height="600"
                 width="800"/>
     <layout expand="editActions" spacing="true">
-        <form id="form" dataContainer="retailerDc">
-            <column width="350px">
-                <textField id="nameField" property="name" caption="msg://retailerNameField.caption"/>
-                <textField id="fullNameField" property="fullName" caption="msg://retailerFullNameField.caption"/>
-            </column>
-        </form>
+        <tabSheet>
+            <tab id="editRetailerTab" caption="msg://editRetailerTab.caption" margin="true,false,false,false" spacing="true">
+                <form id="form" dataContainer="retailerDc">
+                    <column width="350px">
+                        <textField id="nameField" property="name" caption="msg://retailerNameField.caption"/>
+                        <textField id="fullNameField" property="fullName" caption="msg://retailerFullNameField.caption"/>
+                    </column>
+                </form>
+            </tab>
+            <tab id="storeMapTab" caption="msg://storeMapTab.caption" margin="true,false,false,false" spacing="true">
+                <maps:geoMap id="storeMap" width="700px" height="600px" center="50.15, 53.2001" zoom="11">
+                    <maps:layers>
+                        <maps:tile id="tiles" tileProvider="maps_OpenStreetMap"/>
+                        <maps:vector id="storeLayer" dataContainer="storesDc" editable="true"/>
+                    </maps:layers>
+                </maps:geoMap>
+            </tab>
+            <tab id="profitStructureTab" caption="msg://profitStructureTab.caption" margin="true,false,false,false" spacing="true">
+                <chart:pieChart id="pieChart"
+                                dataContainer="storeProductsDc"
+                                height="700px"
+                                titleField="product"
+                                valueField="count"
+                                width="700px">
+                    <chart:legend autoMargins="false"
+                                  marginRight="80"
+                                  markerType="CIRCLE"
+                                  position="RIGHT"/>
+
+                </chart:pieChart>
+            </tab>
+        </tabSheet>
         <hbox id="editActions" spacing="true">
             <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
             <button id="closeBtn" action="windowClose"/>

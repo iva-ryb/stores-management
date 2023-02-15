@@ -4,6 +4,7 @@
     <metadata-model root-package="com.company.application" namespace="application">
         <class>com.company.application.entity.ProductWhoseAmountIsLessThan</class>
         <class>com.company.application.entity.StoreWithNoSuchProduct</class>
+        <class>com.company.application.datatype.GeoCoordinateDatatype</class>
     </metadata-model>
 
 </metadata>
