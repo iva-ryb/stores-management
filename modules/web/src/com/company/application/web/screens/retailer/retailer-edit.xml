@@ -10,10 +10,17 @@
                   class="com.company.application.entity.Retailer">
             <view extends="retailer-view"/>
             <collection id="storesDc" property="stores">
-                <collection id="storeProductsDc" property="storeProducts"/>
             </collection>
             <loader/>
         </instance>
+        <collection id="storeProductsDc" class="com.company.application.entity.StoreProduct">
+            <view extends="_local"/>
+            <loader id="storeProductsDl">
+                <query>
+                    <![CDATA[select e from application_StoreProduct e]]>
+                </query>
+            </loader>
+        </collection>
     </data>
     <dialogMode height="600"
                 width="800"/>

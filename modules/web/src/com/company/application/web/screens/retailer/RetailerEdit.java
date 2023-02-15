@@ -11,7 +11,6 @@ import com.haulmont.addon.maps.gis.utils.GeometryUtils;
 import com.haulmont.addon.maps.web.gui.components.layer.style.FontPointIcon;
 import com.haulmont.addon.maps.web.gui.components.layer.style.GeometryStyle;
 import com.haulmont.addon.maps.web.gui.components.layer.style.PointStyle;
-import com.haulmont.charts.gui.components.charts.Chart;
 import com.haulmont.cuba.core.global.DataManager;
 import com.haulmont.cuba.gui.components.LayoutClickNotifier;
 import com.haulmont.cuba.gui.icons.CubaIcon;
@@ -35,7 +34,7 @@ public class RetailerEdit extends StandardEditor<Retailer> {
     @Inject
     private DataManager dataManager;
     @Inject
-    private CollectionPropertyContainer<StoreProduct> storeProductsDc;
+    private CollectionContainer<StoreProduct> storeProductsDc;
 
     @Subscribe(id = "storesDc", target = Target.DATA_CONTAINER)
     public void onStoresDcCollectionChange(CollectionContainer.CollectionChangeEvent<Store> event) {
@@ -77,6 +76,6 @@ public class RetailerEdit extends StandardEditor<Retailer> {
         for (int i = 0; i < items.size(); i++) {
             storeProducts.addAll(items.get(i).getStoreProducts());
         }
-        storeProductsDc.setDisconnectedItems(storeProducts);
+        storeProductsDc.setItems(storeProducts);
     }
 }
