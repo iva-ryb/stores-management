@@ -1,5 +1,6 @@
 package com.company.application.entity;
 
+import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 import com.haulmont.cuba.core.entity.annotation.OnDeleteInverse;
 import com.haulmont.cuba.core.entity.annotation.PublishEntityChangedEvents;
@@ -12,6 +13,7 @@ import java.math.BigDecimal;
 @PublishEntityChangedEvents
 @Table(name = "APPLICATION_STORE_PRODUCT")
 @Entity(name = "application_StoreProduct")
+@NamePattern("%s %s %s %s|store,product,price,count")
 public class StoreProduct extends StandardEntity {
     private static final long serialVersionUID = -3762454563574648072L;
 
