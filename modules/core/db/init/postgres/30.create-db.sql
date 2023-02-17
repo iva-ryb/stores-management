@@ -1,1 +1,957 @@
+-- start Application Store Employee Role
+insert into SEC_ROLE
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, LOC_NAME, DESCRIPTION, ROLE_TYPE, IS_DEFAULT_ROLE, SYS_TENANT_ID, SECURITY_SCOPE)
+values ('83b5af10-c882-8b86-7440-13296f5e24d2', 2, '2023-02-16 08:40:01', 'admin', '2023-02-16 08:47:35', 'admin', null, null, 'application-store-employee', 'Store Employee', null, 0, null, null, 'GENERIC_UI');
 
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('c61e012a-2046-1d29-03db-2a1a7c9ab600', 1, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:49:56', null, null, null, 20, 'application_StoreProduct:read', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('6e9a9246-6d36-44ac-6fb6-40bd84c5588d', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_StoreProduct:updatedBy', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('d2befe32-f253-fb64-3a74-97d1b7f7a0ee', 1, '2023-02-16 08:40:01', 'admin', '2023-02-16 08:40:01', null, null, null, 20, 'application_Product:update', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('8600689e-b1ed-e973-939a-8cdfcf9e43dc', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 10:15:39', 'admin', null, null, 30, 'application_Store:storeProducts', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('b69b45b1-ac44-e9db-b721-66b654a07c0b', 1, '2023-02-16 08:40:01', 'admin', '2023-02-16 08:40:01', null, null, null, 20, 'application_Product:read', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('9e5bb8f1-4d5b-33fd-99c1-d1c44f16840d', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_StoreProduct:version', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('d95fb5d0-2b29-6dfc-124a-8114a1c30f54', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 10:15:39', 'admin', null, null, 30, 'application_Store:updateTs', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('297c9089-29e0-4c6e-c645-57269fdab651', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_Product:version', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('b54e041e-33a2-c99b-a1de-0158aa207559', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_Product:producer', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('2163edd7-99a5-d73f-b2ca-4f207534fa66', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:52:27', 'admin', null, null, 30, 'application_Retailer:createTs', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('fdd9ed27-c195-35f3-6539-a177f0e02921', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 10:15:39', 'admin', null, null, 30, 'application_Store:updatedBy', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('b20df0b5-3eca-5b2d-cc76-7158dcc8592e', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:52:27', 'admin', null, null, 30, 'application_Retailer:deletedBy', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('3f96ac33-d025-bb94-0291-ed46f34df996', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 10:15:39', 'admin', null, null, 30, 'application_Store:address', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('b635cad4-0272-f201-b3d2-94a63e04bbfb', 1, '2023-02-16 08:40:01', 'admin', '2023-02-16 08:40:01', null, null, null, 20, 'application_Store:read', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('18eae865-6bb2-4087-66d9-506fc65df14b', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_StoreProduct:updateTs', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('9cb7d6bf-eee7-e8e4-5071-0b299e587216', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_StoreProduct:deletedBy', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('87a4a93d-87bb-bc97-9d5d-f9e747c3ccd2', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_Product:createdBy', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('7bbe0e1d-101d-5cc1-469f-aa4b1e98662d', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_StoreProduct:product', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('908d11fe-3ac8-d843-b7ac-409ec8a13b48', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_StoreProduct:price', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('d2be97d7-b4f8-ba4b-07d6-818832ba9e9b', 1, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:49:56', null, null, null, 20, 'application_Store:update', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('45114a9d-26c4-8f16-341d-5dae9fb35e7b', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_StoreProduct:createTs', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('ae860294-df3d-e8b0-05db-0401f82da5ce', 1, '2023-02-16 08:40:01', 'admin', '2023-02-16 08:40:01', null, null, null, 20, 'application_Product:delete', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('4f990926-4372-a582-90ce-7e2436ed29ef', 1, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:49:56', null, null, null, 10, 'application_Retailer.browse', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('fdbe94df-11bc-b109-46c7-7d56efc7f7a5', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_StoreProduct:id', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('c1633351-2b7f-6418-759c-02cbc014d13e', 1, '2023-02-17 10:16:35', 'admin', '2023-02-17 10:16:35', null, null, null, 10, 'application_Store.edit', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('e54080b8-bd9f-9b4f-8f43-02dda2896a17', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_Product:deletedBy', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('bfd80492-fbe0-790f-1ea1-d23705004a99', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_StoreProduct:store', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('3d4a9abc-6a63-9b7c-9c61-a3940cd61c60', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_Product:updatedBy', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('4fc3c183-b17d-8ac1-2533-f3684de0a76c', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 10:15:39', 'admin', null, null, 30, 'application_Store:number', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('2dbea528-7387-5104-1614-d3eb7ba0f6e7', 1, '2023-02-16 08:40:01', 'admin', '2023-02-16 08:40:01', null, null, null, 10, 'application_Store.browse', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('726a45b3-68fc-a5f7-20b2-3272117a34c5', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 10:15:39', 'admin', null, null, 30, 'application_Store:createdBy', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('265a2a1f-fb68-8a58-ff18-9dee5c4fc4f8', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:52:27', 'admin', null, null, 30, 'application_Retailer:createdBy', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('bfdf413a-2b54-cafd-e66e-a1a93c5973e7', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_Product:updateTs', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('04c87fb3-50f3-e4dc-2c0b-0991e252c5aa', 1, '2023-02-16 08:40:01', 'admin', '2023-02-16 08:40:01', null, null, null, 20, 'application_Product:create', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('e2c47793-bf6c-8942-dec2-7e733542bdbd', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 10:15:39', 'admin', null, null, 30, 'application_Store:location', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('88e0d79f-3b90-2af1-a837-e4a269dfd96d', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_StoreProduct:count', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('4de4b01e-fa7f-76a8-d294-a4fe58e5d61b', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_StoreProduct:deleteTs', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('2dff72b4-0c74-bd9a-c403-cfe2c9d3672d', 1, '2023-02-16 08:40:01', 'admin', '2023-02-16 08:40:01', null, null, null, 10, 'application_StoreServiceScreen', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('6a9cf213-9f9f-e309-df15-3520f4f3dbe4', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 10:15:39', 'admin', null, null, 30, 'application_Store:name', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('7b46eb96-b792-6745-b542-394250da239b', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 10:15:39', 'admin', null, null, 30, 'application_Store:version', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('2134be90-0471-f918-80d3-8765ad7e69cd', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:52:27', 'admin', null, null, 30, 'application_Retailer:updatedBy', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('493771ac-0430-cd53-35ad-ab868ac20158', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 10:15:39', 'admin', null, null, 30, 'application_Store:deletedBy', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('f2859bfa-b06a-8b9e-1913-8ebdb8dbfab7', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_Product:createTs', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('f0be704e-fe4d-8511-e097-ad24af344ce1', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_StoreProduct:createdBy', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('e0a72414-5679-95cd-beb0-5f84a8ead696', 1, '2023-02-17 09:51:19', 'admin', '2023-02-17 09:51:19', null, null, null, 10, 'managementStoreChain', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('acafdb74-a3e4-887d-1910-879d0f40185f', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:52:27', 'admin', null, null, 30, 'application_Retailer:name', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('5dd288c3-ea6c-3cb8-f4df-2d5f23b34122', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_ProductWhoseAmountIsLessThan:count', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('7cd4a8da-1b0a-c201-d67f-7b5490a7165e', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_ProductWhoseAmountIsLessThan:product', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('c09b0280-9148-f163-965a-d074734be90c', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_Product:deleteTs', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('5913906a-7e69-ae87-81f6-e4ce51e61f93', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:52:27', 'admin', null, null, 30, 'application_Retailer:id', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('964d9b4e-3f0b-de5f-b2a1-c66a60d76890', 1, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:49:56', null, null, null, 20, 'application_Retailer:read', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('ff62d7ed-0beb-99f7-258e-e76173d84af8', 1, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:49:56', null, null, null, 20, 'application_StoreProduct:create', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('1aa599a2-cd6a-f89b-9ba2-39366673c4cc', 1, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:49:56', null, null, null, 10, 'application_StoreProduct.edit', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('b53882bb-c1fc-49d5-6d60-c6dc4f17e061', 1, '2023-02-17 10:16:35', 'admin', '2023-02-17 10:16:35', null, null, null, 10, 'application_Product.browse', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('54ee499a-01c1-3612-52ab-f36dabf94379', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_Product:priceFromProducer', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('b01e70c2-ac84-47f7-3262-081e84d872e9', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_Product:id', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('b6e24d8d-ad87-62f2-a016-52eed10d9b8b', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_Product:name', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('7f678217-8cf0-0857-817f-349bfe0840df', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:52:27', 'admin', null, null, 30, 'application_Retailer:stores', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('1b331e70-cc4f-37d7-a5bb-00184b66b379', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:52:27', 'admin', null, null, 30, 'application_Retailer:fullName', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('b166eb02-7b6a-19af-490a-4fd5d9323da5', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 10:15:39', 'admin', null, null, 30, 'application_Store:createTs', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('5a76328d-61b4-4c93-bba9-c055d10f4242', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:52:27', 'admin', null, null, 30, 'application_Retailer:updateTs', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('b48d3688-df6c-53f2-1d4f-3f459624abdb', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 10:15:39', 'admin', null, null, 30, 'application_Store:id', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('efcef07d-4bb8-2400-8b33-12016e5c4d9d', 1, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:49:56', null, null, null, 20, 'application_StoreProduct:update', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('29a1c945-3913-2c7f-b67d-e808deea366f', 1, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:49:56', null, null, null, 20, 'application_Store:delete', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('4fe71709-1937-8200-2713-76e8fc9908c3', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:52:27', 'admin', null, null, 30, 'application_Retailer:version', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('86e9232f-a2cb-f2ac-6fed-d857384dd62d', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 10:15:39', 'admin', null, null, 30, 'application_Store:deleteTs', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('5183762b-23f7-edc5-9864-1e8fe8df40d2', 3, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:52:27', 'admin', null, null, 30, 'application_Retailer:deleteTs', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('6577938f-2a80-6974-6700-a55a649554be', 1, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:49:56', null, null, null, 20, 'application_StoreProduct:delete', 1, '83b5af10-c882-8b86-7440-13296f5e24d2');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('5611071b-51a8-52c9-b0a7-81005f06fdb4', 2, '2023-02-17 09:49:56', 'admin', '2023-02-17 09:51:05', 'admin', null, null, 30, 'application_ProductWhoseAmountIsLessThan:id', 2, '83b5af10-c882-8b86-7440-13296f5e24d2');
+-- end
+-- start application Producer Role
+insert into SEC_ROLE
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, LOC_NAME, DESCRIPTION, ROLE_TYPE, IS_DEFAULT_ROLE, SYS_TENANT_ID, SECURITY_SCOPE)
+values ('f2b62e46-13ed-0d79-7cc3-ed78e389b602', 2, '2023-02-16 08:47:02', 'admin', '2023-02-16 08:47:23', 'admin', null, null, 'application-producer', 'Producer Access', null, 0, null, null, 'GENERIC_UI');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('650337b3-ccf9-11d7-8560-eb762bbf6437', 1, '2023-02-17 10:25:38', 'admin', '2023-02-17 10:25:38', null, null, null, 30, 'application_Store:name', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('d28fb3dd-96ad-37e0-6918-90622f426225', 1, '2023-02-17 09:54:45', 'admin', '2023-02-17 09:54:45', null, null, null, 30, 'application_Product:id', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('2396c589-ad16-c35d-0b4f-98e019a277db', 2, '2023-02-17 09:54:45', 'admin', '2023-02-17 10:23:11', 'admin', null, null, 30, 'application_Producer:updateTs', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('92d869fa-673a-4405-808f-e156d60c314a', 1, '2023-02-17 10:25:38', 'admin', '2023-02-17 10:25:38', null, null, null, 30, 'application_Store:deleteTs', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('bfb99444-4358-7ccf-c603-8f271de2e4af', 1, '2023-02-17 09:54:45', 'admin', '2023-02-17 09:54:45', null, null, null, 30, 'application_Product:deleteTs', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('7b7375d7-a0ff-c136-89cc-e11f3223b71b', 1, '2023-02-17 09:54:45', 'admin', '2023-02-17 09:54:45', null, null, null, 10, 'managementProduction', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('977b69c8-b77e-fafe-56e8-ea43b3a51f3a', 1, '2023-02-17 10:23:44', 'admin', '2023-02-17 10:23:44', null, null, null, 10, 'application_Product.edit', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('26b83e32-45c2-0332-6fb3-dc9cd14deb9f', 1, '2023-02-17 10:25:38', 'admin', '2023-02-17 10:25:38', null, null, null, 30, 'application_Store:id', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('4708376d-4e63-0b76-7f43-fdc2b05736af', 2, '2023-02-17 09:54:45', 'admin', '2023-02-17 10:23:11', 'admin', null, null, 30, 'application_Producer:deleteTs', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('b0950870-e9d1-56fc-ce69-168695bc8411', 2, '2023-02-17 09:54:45', 'admin', '2023-02-17 10:23:11', 'admin', null, null, 30, 'application_Producer:version', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('b364425b-f422-a3ad-ac60-38796028368f', 1, '2023-02-17 10:25:38', 'admin', '2023-02-17 10:25:38', null, null, null, 20, 'application_Store:read', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('126d404f-cc15-9443-6976-e1724517cde9', 1, '2023-02-17 10:28:08', 'admin', '2023-02-17 10:28:08', null, null, null, 20, 'application_ProductWhoseAmountIsLessThan:delete', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('c08a5ea8-4c87-a6fc-f448-02cc40e45729', 2, '2023-02-17 09:54:45', 'admin', '2023-02-17 10:23:11', 'admin', null, null, 30, 'application_Producer:deletedBy', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('cb5d9668-5218-a230-89b9-3f48e40646fb', 1, '2023-02-17 10:25:38', 'admin', '2023-02-17 10:25:38', null, null, null, 30, 'application_Store:number', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('e68014a2-8c27-aefe-ca49-caa83a481dc0', 1, '2023-02-16 08:47:02', 'admin', '2023-02-16 08:47:02', null, null, null, 10, 'application_Product.browse', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('9bd08b64-9b2e-26f1-0959-c476f977b1a1', 1, '2023-02-17 10:25:38', 'admin', '2023-02-17 10:25:38', null, null, null, 30, 'application_Store:storeProducts', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('4a8675c1-b162-0fcf-d64d-0aa59256e340', 1, '2023-02-17 10:25:38', 'admin', '2023-02-17 10:25:38', null, null, null, 30, 'application_Store:address', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('8ccec144-0ec6-72c3-a462-4895aee08c0c', 1, '2023-02-17 10:25:38', 'admin', '2023-02-17 10:25:38', null, null, null, 30, 'application_Store:createTs', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('131d379a-9257-8472-f57e-14f03d39768c', 1, '2023-02-17 10:28:08', 'admin', '2023-02-17 10:28:08', null, null, null, 20, 'application_ProductWhoseAmountIsLessThan:create', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('b51f7939-7f24-2132-6774-3da9d36ebf98', 2, '2023-02-17 09:54:45', 'admin', '2023-02-17 10:23:11', 'admin', null, null, 30, 'application_Producer:createTs', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('952b2b32-b519-c215-f8a1-f1699a8c33ca', 1, '2023-02-17 10:28:08', 'admin', '2023-02-17 10:28:08', null, null, null, 30, 'application_StoreWithNoSuchProduct:store', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('a94c91b5-542b-5b28-3a1d-da408f8fb037', 1, '2023-02-17 09:54:45', 'admin', '2023-02-17 09:54:45', null, null, null, 30, 'application_Product:name', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('dd3f6a49-fcdf-c66b-bb8f-2e51c1b95604', 1, '2023-02-16 08:47:02', 'admin', '2023-02-16 08:47:02', null, null, null, 10, 'application_ProducerServiceScreen', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('a81b467a-f74a-603f-db60-64be4452d93b', 1, '2023-02-17 09:54:45', 'admin', '2023-02-17 09:54:45', null, null, null, 30, 'application_Product:updateTs', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('931b9d87-0080-d81e-d921-c952d5c5a811', 1, '2023-02-17 10:25:38', 'admin', '2023-02-17 10:25:38', null, null, null, 30, 'application_Store:version', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('108fa1d4-e393-0286-2d06-d27cf6957c04', 1, '2023-02-17 10:28:08', 'admin', '2023-02-17 10:28:08', null, null, null, 30, 'application_ProductWhoseAmountIsLessThan:id', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('e7b8c144-d870-dddf-f9a1-ef0b7e4c3e9d', 2, '2023-02-17 09:54:45', 'admin', '2023-02-17 10:23:11', 'admin', null, null, 30, 'application_Producer:createdBy', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('8600bd50-f65d-dfab-bef2-19b8f4453f00', 1, '2023-02-17 10:28:08', 'admin', '2023-02-17 10:28:08', null, null, null, 30, 'application_ProductWhoseAmountIsLessThan:count', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('bc02b5ea-15d9-9c50-9356-2056b5ccf507', 1, '2023-02-16 08:47:02', 'admin', '2023-02-16 08:47:02', null, null, null, 20, 'application_Product:create', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('67fe6185-8e11-8b6b-1af0-b0790bbf299d', 1, '2023-02-17 10:25:38', 'admin', '2023-02-17 10:25:38', null, null, null, 30, 'application_Store:deletedBy', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('d9a9c4f2-0550-dd2f-0be4-2a033f6fd986', 1, '2023-02-17 10:25:38', 'admin', '2023-02-17 10:25:38', null, null, null, 30, 'application_Store:createdBy', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('f954ad73-e8c9-741c-f88e-80ea22b9e681', 1, '2023-02-17 10:28:08', 'admin', '2023-02-17 10:28:08', null, null, null, 20, 'application_StoreWithNoSuchProduct:read', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('1f73adff-c0f8-ca99-6fba-7a93bc233756', 1, '2023-02-17 09:54:45', 'admin', '2023-02-17 09:54:45', null, null, null, 30, 'application_Product:createdBy', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('608d840e-051e-33d9-37de-359ae9d8996e', 2, '2023-02-17 09:54:45', 'admin', '2023-02-17 10:23:11', 'admin', null, null, 30, 'application_Producer:address', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('d52db27e-ba51-04c9-da40-308c80c215fc', 1, '2023-02-17 10:25:38', 'admin', '2023-02-17 10:25:38', null, null, null, 30, 'application_Store:retailer', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('39723002-3c7f-10bc-be2e-425b40ff4080', 1, '2023-02-17 10:28:08', 'admin', '2023-02-17 10:28:08', null, null, null, 30, 'application_StoreWithNoSuchProduct:id', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('fc93058e-cae8-4198-15fe-bf626c4ac000', 1, '2023-02-17 09:54:45', 'admin', '2023-02-17 09:54:45', null, null, null, 30, 'application_Product:version', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('d1a58103-1691-0498-c297-5a9ae7c94250', 1, '2023-02-17 10:24:41', 'admin', '2023-02-17 10:24:41', null, null, null, 10, 'application_Store.browse', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('1406b226-dfb3-6afd-5105-8f7d1963d8c9', 1, '2023-02-17 10:28:08', 'admin', '2023-02-17 10:28:08', null, null, null, 20, 'application_ProductWhoseAmountIsLessThan:read', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('f2c36b8b-d1e9-c1e8-dc30-69d600ded3cc', 2, '2023-02-17 09:54:45', 'admin', '2023-02-17 10:23:11', 'admin', null, null, 30, 'application_Producer:user', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('5c7b16c0-6ddf-4385-54cd-d68c7a6d6572', 1, '2023-02-17 09:54:45', 'admin', '2023-02-17 09:54:45', null, null, null, 30, 'application_Product:producer', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('5210940d-6679-5b8d-a7df-c916746e8371', 1, '2023-02-17 10:23:11', 'admin', '2023-02-17 10:23:11', null, null, null, 10, 'application_Producer.edit', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('137e4178-8378-a2c6-a5e6-d313c25b845f', 1, '2023-02-17 10:25:38', 'admin', '2023-02-17 10:25:38', null, null, null, 30, 'application_Store:updatedBy', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('97a9eff3-5472-3964-a639-74dabc0d0ce9', 1, '2023-02-17 10:25:38', 'admin', '2023-02-17 10:25:38', null, null, null, 30, 'application_Store:updateTs', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('7d84241e-158b-faa9-b67e-f377a31031ed', 2, '2023-02-17 09:54:45', 'admin', '2023-02-17 10:23:11', 'admin', null, null, 30, 'application_Producer:name', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('7f9db682-ed9e-45b2-96cb-ed6e15527188', 2, '2023-02-17 09:54:45', 'admin', '2023-02-17 10:23:11', 'admin', null, null, 30, 'application_Producer:id', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('2f1c8e8f-7f15-fc8c-b9c4-5c78f181877a', 1, '2023-02-16 08:47:02', 'admin', '2023-02-16 08:47:02', null, null, null, 20, 'application_Producer:delete', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('848f861a-816d-675c-6413-6e6f01796273', 1, '2023-02-17 10:28:08', 'admin', '2023-02-17 10:28:08', null, null, null, 30, 'application_ProductWhoseAmountIsLessThan:product', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('da17c8bb-b144-ced6-acda-e8e4d9fc0424', 1, '2023-02-17 09:54:45', 'admin', '2023-02-17 09:54:45', null, null, null, 30, 'application_Product:deletedBy', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('7989b0ee-a566-17f2-470f-5e4ebe22edca', 1, '2023-02-17 09:54:45', 'admin', '2023-02-17 09:54:45', null, null, null, 30, 'application_Product:createTs', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('dd63bc80-4288-e869-c193-cfa0f8b24c5c', 1, '2023-02-17 10:28:08', 'admin', '2023-02-17 10:28:08', null, null, null, 20, 'application_StoreWithNoSuchProduct:update', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('fab92221-bb3f-0de5-d056-23bb0f6ca123', 1, '2023-02-16 08:47:02', 'admin', '2023-02-16 08:47:02', null, null, null, 20, 'application_Producer:update', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('cb5b96cf-9863-6bfc-b203-f30cc11e9570', 1, '2023-02-17 10:28:08', 'admin', '2023-02-17 10:28:08', null, null, null, 20, 'application_StoreWithNoSuchProduct:create', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('e993afdd-d957-19e1-0a71-2597c6eb5d1e', 1, '2023-02-17 10:25:38', 'admin', '2023-02-17 10:25:38', null, null, null, 30, 'application_Store:location', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('0e0782f2-0246-924b-5ee2-9db53d6acca9', 1, '2023-02-17 10:28:08', 'admin', '2023-02-17 10:28:08', null, null, null, 20, 'application_ProductWhoseAmountIsLessThan:update', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('5978bceb-c45b-216e-bef0-60e765ad8c73', 1, '2023-02-16 08:47:02', 'admin', '2023-02-16 08:47:02', null, null, null, 20, 'application_Product:delete', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('502ea8c0-e42f-68d5-8661-065f1479dda1', 1, '2023-02-17 09:54:45', 'admin', '2023-02-17 09:54:45', null, null, null, 30, 'application_Product:priceFromProducer', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('b7a65f24-3d2c-13ce-d108-1ad4a6f0e7b8', 1, '2023-02-17 09:54:45', 'admin', '2023-02-17 09:54:45', null, null, null, 30, 'application_Product:updatedBy', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('cdc77e6e-caf9-3b4e-4e1e-42af015b730d', 1, '2023-02-17 10:28:08', 'admin', '2023-02-17 10:28:08', null, null, null, 20, 'application_StoreWithNoSuchProduct:delete', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('52c566ac-ad65-8c3e-ce80-5f151470b1ad', 2, '2023-02-17 09:54:45', 'admin', '2023-02-17 10:23:11', 'admin', null, null, 30, 'application_Producer:fullName', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('2c442451-06c1-392c-fae2-bd787e60ee79', 1, '2023-02-16 08:47:02', 'admin', '2023-02-16 08:47:02', null, null, null, 20, 'application_Producer:read', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('59286d9b-de9c-94c8-447a-ccf87fb1ca2f', 1, '2023-02-16 08:47:02', 'admin', '2023-02-16 08:47:02', null, null, null, 20, 'application_Product:update', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('e729a483-fbe4-93f1-3772-f366fd779f20', 2, '2023-02-17 09:54:45', 'admin', '2023-02-17 10:23:11', 'admin', null, null, 30, 'application_Producer:updatedBy', 2, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('0fc3c8cf-e076-a925-93be-0af71b21b14a', 1, '2023-02-16 08:47:02', 'admin', '2023-02-16 08:47:02', null, null, null, 20, 'application_Product:read', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('739687e2-b08b-d1a5-f6ad-a0a038e89b40', 1, '2023-02-16 08:47:02', 'admin', '2023-02-16 08:47:02', null, null, null, 10, 'application_Producer.browse', 1, 'f2b62e46-13ed-0d79-7cc3-ed78e389b602');
+-- end Application Producer Role
+-- start application Cashier Role
+insert into SEC_ROLE
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, LOC_NAME, DESCRIPTION, ROLE_TYPE, IS_DEFAULT_ROLE, SYS_TENANT_ID, SECURITY_SCOPE)
+values ('26c64cc7-2e7c-40ef-84fb-09f5c99f065c', 1, '2023-02-16 08:56:40', 'admin', '2023-02-16 08:56:40', null, null, null, 'application-cashier', 'Cashier', null, 0, null, null, 'GENERIC_UI');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('05a5c65a-855a-f89d-aad1-4323863865f3', 1, '2023-02-16 08:56:40', 'admin', '2023-02-16 08:56:40', null, null, null, 20, 'application_Product:update', 1, '26c64cc7-2e7c-40ef-84fb-09f5c99f065c');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('7dc5f196-d45a-e90d-3887-b079150bae02', 1, '2023-02-16 08:56:40', 'admin', '2023-02-16 08:56:40', null, null, null, 20, 'application_Purchase:read', 1, '26c64cc7-2e7c-40ef-84fb-09f5c99f065c');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('0c8e8bb6-f4ee-f72e-fc24-2c3d0fa13c73', 1, '2023-02-16 08:56:40', 'admin', '2023-02-16 08:56:40', null, null, null, 20, 'application_PurchaseProduct:read', 1, '26c64cc7-2e7c-40ef-84fb-09f5c99f065c');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('baf4c190-0fbb-1240-92f6-a6db01a3aeb5', 1, '2023-02-16 08:56:40', 'admin', '2023-02-16 08:56:40', null, null, null, 10, 'application_StoreServiceScreen', 1, '26c64cc7-2e7c-40ef-84fb-09f5c99f065c');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('4b3a5a64-8ca6-47b1-3766-42e2fd552fcd', 1, '2023-02-16 08:56:40', 'admin', '2023-02-16 08:56:40', null, null, null, 10, 'application_Store.browse', 1, '26c64cc7-2e7c-40ef-84fb-09f5c99f065c');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('69bc2bfa-0c35-79c5-8e8f-83621b82e5bf', 1, '2023-02-16 08:56:40', 'admin', '2023-02-16 08:56:40', null, null, null, 20, 'application_Product:read', 1, '26c64cc7-2e7c-40ef-84fb-09f5c99f065c');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('ef77cb86-ad2a-b0e8-baf6-fb0e7be70376', 1, '2023-02-16 08:56:40', 'admin', '2023-02-16 08:56:40', null, null, null, 10, 'application_Product.browse', 1, '26c64cc7-2e7c-40ef-84fb-09f5c99f065c');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('07de226d-6502-da6f-19b9-aa7f2a5bfe6f', 1, '2023-02-16 08:56:40', 'admin', '2023-02-16 08:56:40', null, null, null, 20, 'application_Store:read', 1, '26c64cc7-2e7c-40ef-84fb-09f5c99f065c');
+-- end application Cashier Role
+-- start application Buyer Role
+insert into SEC_ROLE
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, LOC_NAME, DESCRIPTION, ROLE_TYPE, IS_DEFAULT_ROLE, SYS_TENANT_ID, SECURITY_SCOPE)
+values ('f55ac0de-9326-aed4-431f-f3c88fc0c062', 1, '2023-02-16 08:58:31', 'admin', '2023-02-16 08:58:31', null, null, null, 'application-buyer', 'Buyer', null, 0, null, null, 'GENERIC_UI');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('aa7d6461-01da-a703-4ede-7c370a1a7b36', 1, '2023-02-16 08:58:31', 'admin', '2023-02-16 08:58:31', null, null, null, 20, 'application_Purchase:update', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('a8ddb5bd-c0ad-df72-880b-d7e81ca96e75', 1, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:41:02', null, null, null, 30, 'application_Product:createTs', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('f728df9d-b538-fc0e-8e75-8e917c83a3e6', 1, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:41:02', null, null, null, 30, 'application_Product:deleteTs', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('97feae59-9575-2c0d-257a-8b582774ef0c', 1, '2023-02-17 10:48:36', 'admin', '2023-02-17 10:48:36', null, null, null, 10, 'application_Store.edit', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('0152ca09-6c62-5d36-dde0-0c2244489f03', 1, '2023-02-17 10:48:36', 'admin', '2023-02-17 10:48:36', null, null, null, 30, 'application_StoreProduct:deleteTs', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('8797abcb-2483-ee2d-a64e-6de83351e082', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_PurchaseProduct:id', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('85e19502-eb07-0e56-e376-88ec11389b98', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_PurchaseProduct:product', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('e15df92d-f2a6-94ac-218a-d8e13ff5ae6e', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_PurchaseProduct:updatedBy', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('4007b914-dbb1-b687-0bc9-8368cbbbf533', 2, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:48:36', 'admin', null, null, 30, 'application_Store:name', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('180166f8-3f65-38f2-774b-599664d14372', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_PurchaseProduct:createTs', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('9a86577f-afe0-7550-032f-3d4e96e663de', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_Purchase:createdBy', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('4435b6c7-f4be-75b8-6970-067c7e8682ef', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_PurchaseProduct:updateTs', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('ae9b6f6c-bef3-22da-ef2c-9e545bc5cbf2', 2, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:48:36', 'admin', null, null, 30, 'application_Store:version', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('3806d53b-face-f95f-8758-0c94c1d89a2a', 1, '2023-02-17 10:48:36', 'admin', '2023-02-17 10:48:36', null, null, null, 30, 'application_StoreProduct:version', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('4cc7fcd0-d0a3-f993-f686-9cc6b9bc374d', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_Purchase:id', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('191886fb-e1e5-cf74-9152-96769f17f156', 2, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:48:36', 'admin', null, null, 30, 'application_Store:location', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('840660c1-8dcc-9553-3013-cfab98a82f51', 1, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:41:02', null, null, null, 30, 'application_Product:producer', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('a2b3116d-a20c-a130-bdbc-189a1df5b128', 1, '2023-02-17 10:48:36', 'admin', '2023-02-17 10:48:36', null, null, null, 30, 'application_StoreProduct:createTs', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('2b858065-d6b8-89ea-1d61-3a64c69754bb', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_Purchase:version', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('bf8ef40d-dbc6-3ad2-570b-70c2f1305e75', 1, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:41:02', null, null, null, 30, 'application_Product:priceFromProducer', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('6a6d3339-2170-d58a-ec79-0c7e3ee239d7', 1, '2023-02-16 08:58:31', 'admin', '2023-02-16 08:58:31', null, null, null, 20, 'application_Purchase:delete', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('d7865e66-6700-d9bd-da08-11d8133c97ad', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_PurchaseProduct:createdBy', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('8fed0d52-2756-a8a3-f11d-8408215a8119', 1, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:41:02', null, null, null, 30, 'application_Product:updateTs', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('6b84ba54-d5f8-f19c-0c2a-b57d623c6842', 2, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:48:36', 'admin', null, null, 30, 'application_Store:deletedBy', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('aece473b-2dfe-2af6-5fc7-4c199b15c928', 1, '2023-02-16 08:58:31', 'admin', '2023-02-16 08:58:31', null, null, null, 20, 'application_PurchaseProduct:read', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('5d2a2cb1-7127-ec8a-515d-553f91de1b2a', 1, '2023-02-17 10:40:03', 'admin', '2023-02-17 10:40:03', null, null, null, 10, 'application_Store.browse', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('880fadf4-2987-fae5-49ff-fc16ac520983', 2, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:48:36', 'admin', null, null, 30, 'application_Store:deleteTs', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('12d1e266-a45f-e883-ed6f-196463c19f05', 1, '2023-02-17 10:41:57', 'admin', '2023-02-17 10:41:57', null, null, null, 20, 'application_Product:read', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('0e7e02f2-37b9-d25e-41ca-40be63618fd8', 1, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:41:02', null, null, null, 30, 'application_Product:version', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('f66f4591-990a-1813-2141-570b7462e568', 1, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:41:02', null, null, null, 30, 'application_Product:id', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('f5bc9b60-a1c1-82d4-309d-dac3b3ebcddb', 1, '2023-02-17 10:48:36', 'admin', '2023-02-17 10:48:36', null, null, null, 30, 'application_StoreProduct:product', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('d777af84-5035-c3bd-11d7-3c295154b379', 2, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:48:36', 'admin', null, null, 30, 'application_Store:address', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('eda044b3-e24b-95c8-991b-a0f575531684', 1, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:41:02', null, null, null, 10, 'application_PurchaseProduct.edit', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('f6fd91ea-f520-cac8-5b1c-1d9ca545b811', 1, '2023-02-17 10:46:16', 'admin', '2023-02-17 10:46:16', null, null, null, 10, 'application_StoreProduct.edit', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('00c9cd7f-3022-dcb6-6a34-1a4ad3f05481', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_Purchase:deletedBy', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('b180a451-1090-feed-b60c-398d04236dbe', 1, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:41:02', null, null, null, 30, 'application_Product:name', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('68c28584-2dfc-a5df-e52e-f95be5230301', 1, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:41:02', null, null, null, 30, 'application_Product:deletedBy', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('30f35420-03a0-b51a-e59b-94843b64f920', 1, '2023-02-17 10:48:36', 'admin', '2023-02-17 10:48:36', null, null, null, 20, 'application_StoreProduct:update', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('774a62bf-52ab-23e1-9c01-aa2a1fefe649', 1, '2023-02-17 10:48:36', 'admin', '2023-02-17 10:48:36', null, null, null, 30, 'application_StoreProduct:deletedBy', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('d4da7f23-c27c-088e-3788-583e94254aab', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_Purchase:deleteTs', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('9ba17fbd-a2d7-15f0-df9b-42c57c3f666e', 1, '2023-02-16 08:58:31', 'admin', '2023-02-16 08:58:31', null, null, null, 20, 'application_Purchase:create', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('94072a36-a237-60dd-e9cb-c86efc2ab8e1', 1, '2023-02-17 10:48:36', 'admin', '2023-02-17 10:48:36', null, null, null, 20, 'application_StoreProduct:delete', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('1454843f-e98c-2dbb-c5e2-5191658ae29d', 1, '2023-02-17 10:48:36', 'admin', '2023-02-17 10:48:36', null, null, null, 30, 'application_StoreProduct:id', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('cf8e09d0-aadd-a26d-49cb-a689250bc31e', 1, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:41:02', null, null, null, 30, 'application_Product:updatedBy', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('fc4ed661-9004-0753-e662-14b5e71b8b0e', 1, '2023-02-17 10:48:36', 'admin', '2023-02-17 10:48:36', null, null, null, 30, 'application_StoreProduct:updateTs', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('246e99ba-2c00-882f-0206-bd5e708672e7', 2, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:48:36', 'admin', null, null, 30, 'application_Store:id', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('e99c997c-5336-b15e-45cd-05a943ac4485', 2, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:48:36', 'admin', null, null, 30, 'application_Store:updateTs', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('725c673a-e9de-6412-a5fd-4dbfe55df572', 1, '2023-02-17 10:41:57', 'admin', '2023-02-17 10:41:57', null, null, null, 20, 'application_Store:read', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('61dc662a-b609-1625-f923-ea71d5d2481d', 2, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:48:36', 'admin', null, null, 30, 'application_Store:retailer', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('bf5a26a5-6d2a-a8f9-096f-890b9a80010f', 1, '2023-02-17 10:48:36', 'admin', '2023-02-17 10:48:36', null, null, null, 30, 'application_StoreProduct:store', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('84d9e50d-98e8-d763-4658-d2eee98626a7', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_Purchase:purchaseProducts', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('98363110-1c6d-2107-3473-66e24b5c394b', 1, '2023-02-16 08:58:31', 'admin', '2023-02-16 08:58:31', null, null, null, 20, 'application_PurchaseProduct:create', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('04875675-c900-2e4b-8f28-55880548fa1c', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_Purchase:createTs', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('acdc3639-fbad-9b2e-8508-677a5144e91d', 1, '2023-02-17 10:48:36', 'admin', '2023-02-17 10:48:36', null, null, null, 20, 'application_StoreProduct:create', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('77738625-6f77-9b8c-692e-1e0d974efd10', 2, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:48:36', 'admin', null, null, 30, 'application_Store:updatedBy', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('a34c4dee-c41f-7fb5-f0df-773ee2f0bdcd', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_Purchase:store', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('36a6e514-19e1-1ae3-b69c-54698c29ae38', 1, '2023-02-17 10:48:36', 'admin', '2023-02-17 10:48:36', null, null, null, 20, 'application_StoreProduct:read', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('5171ad8c-444e-a45e-f7b3-c7d08fb291e9', 1, '2023-02-16 08:58:31', 'admin', '2023-02-16 08:58:31', null, null, null, 20, 'application_PurchaseProduct:delete', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('9d6b4636-a18c-8347-22f1-b629b58f4897', 1, '2023-02-17 10:48:36', 'admin', '2023-02-17 10:48:36', null, null, null, 30, 'application_StoreProduct:price', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('82c09642-7d10-fc77-d11c-0437c77eff68', 1, '2023-02-17 10:48:36', 'admin', '2023-02-17 10:48:36', null, null, null, 30, 'application_StoreProduct:updatedBy', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('64804934-5813-2a05-ddfd-79929eeadcfe', 2, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:48:36', 'admin', null, null, 30, 'application_Store:createTs', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('9fee6d5b-1c7f-f9f1-c61c-576f96316d22', 1, '2023-02-16 08:58:31', 'admin', '2023-02-16 08:58:31', null, null, null, 10, 'application_Purchase.browse', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('15127c83-35f5-d347-1607-1cb95b85c7c3', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_PurchaseProduct:deleteTs', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('5d7cb121-7e3f-cb6c-fa96-262f6094d07c', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_Purchase:updateTs', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('b34331d6-7dba-9dea-d175-23febb1432ba', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_PurchaseProduct:deletedBy', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('22a79695-e7a5-fee5-60c4-54ff5a0790ae', 2, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:48:36', 'admin', null, null, 30, 'application_Store:number', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('dc9931f8-6cc3-8994-38ff-68d58e455d3a', 1, '2023-02-16 08:58:31', 'admin', '2023-02-16 08:58:31', null, null, null, 20, 'application_Purchase:read', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('a4d368df-9375-38b3-8ab8-1c9f34f79dfe', 1, '2023-02-17 10:48:36', 'admin', '2023-02-17 10:48:36', null, null, null, 30, 'application_StoreProduct:count', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('f3674fdc-896e-b04a-1447-d0f07db2887f', 1, '2023-02-17 10:42:26', 'admin', '2023-02-17 10:42:26', null, null, null, 10, 'application_Product.browse', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('d4104b51-3c2a-aa96-ee33-fbfc38dd4e00', 1, '2023-02-17 10:40:03', 'admin', '2023-02-17 10:40:03', null, null, null, 10, 'application_Product.edit', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('6bafa08c-dd0b-1f83-4c49-0946d7ec2d3c', 2, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:48:36', 'admin', null, null, 30, 'application_Store:createdBy', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('e5613347-5589-fe23-528d-d3194dc924a7', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_Purchase:updatedBy', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('efd29d12-9a9e-890c-3096-794c70e79e99', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_PurchaseProduct:version', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('a91eef2c-8044-11f3-e6c3-f72abcde33c4', 1, '2023-02-17 10:48:36', 'admin', '2023-02-17 10:48:36', null, null, null, 30, 'application_StoreProduct:createdBy', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('ab44bac2-c498-59d0-ec8c-281e8c12e2b6', 1, '2023-02-17 10:41:02', 'admin', '2023-02-17 10:41:02', null, null, null, 30, 'application_Product:createdBy', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('b6f94461-73ee-92b7-75d1-7bbc01dd600a', 1, '2023-02-16 08:58:31', 'admin', '2023-02-16 08:58:31', null, null, null, 20, 'application_PurchaseProduct:update', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('575c0a3f-1a56-866b-66e6-789f401f67c3', 1, '2023-02-17 10:37:59', 'admin', '2023-02-17 10:37:59', null, null, null, 10, 'application_Purchase.edit', 1, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('53c14414-0e22-24f3-9134-fde7a3f2ed58', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_PurchaseProduct:count', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('9cf15705-71a8-8a9f-8d3c-e8368498512f', 1, '2023-02-17 10:39:21', 'admin', '2023-02-17 10:39:21', null, null, null, 30, 'application_PurchaseProduct:purchase', 2, 'f55ac0de-9326-aed4-431f-f3c88fc0c062');
+-- end application Buyer Role
+-- start application Online Store Employee Role
+insert into SEC_ROLE
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, LOC_NAME, DESCRIPTION, ROLE_TYPE, IS_DEFAULT_ROLE, SYS_TENANT_ID, SECURITY_SCOPE)
+values ('ca0159ab-16e4-7925-ae45-4e242ab88230', 1, '2023-02-16 09:01:46', 'admin', '2023-02-16 09:01:46', null, null, null, 'application-online-store-employee', 'Online Store Employee', null, 0, null, null, 'GENERIC_UI');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('d5cf650a-a210-50bc-5ae5-249d92bfca2e', 1, '2023-02-16 09:01:46', 'admin', '2023-02-16 09:01:46', null, null, null, 10, 'application_Store.browse', 1, 'ca0159ab-16e4-7925-ae45-4e242ab88230');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('7b723587-1e3e-778b-f8d7-3128a823f06d', 1, '2023-02-16 09:01:46', 'admin', '2023-02-16 09:01:46', null, null, null, 20, 'application_Product:create', 1, 'ca0159ab-16e4-7925-ae45-4e242ab88230');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('2a2d3be1-1624-2848-7cc3-94afd5233d3d', 1, '2023-02-16 09:01:46', 'admin', '2023-02-16 09:01:46', null, null, null, 20, 'application_Store:update', 1, 'ca0159ab-16e4-7925-ae45-4e242ab88230');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('36fdaab4-41cc-cee6-85b7-d79385a726a5', 1, '2023-02-16 09:01:46', 'admin', '2023-02-16 09:01:46', null, null, null, 20, 'application_Store:read', 1, 'ca0159ab-16e4-7925-ae45-4e242ab88230');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('8b65ca50-e625-a79e-9e32-74052b450022', 1, '2023-02-16 09:01:46', 'admin', '2023-02-16 09:01:46', null, null, null, 10, 'application_Product.browse', 1, 'ca0159ab-16e4-7925-ae45-4e242ab88230');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('b667a69c-5e7d-18e9-fe7a-b12228cb87f3', 1, '2023-02-16 09:01:46', 'admin', '2023-02-16 09:01:46', null, null, null, 20, 'application_Product:delete', 1, 'ca0159ab-16e4-7925-ae45-4e242ab88230');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('d0dd28ec-9a58-6724-5abd-178cd6df528c', 1, '2023-02-16 09:01:46', 'admin', '2023-02-16 09:01:46', null, null, null, 20, 'application_Product:read', 1, 'ca0159ab-16e4-7925-ae45-4e242ab88230');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('e0f4eb49-eb13-e956-5447-54508305dd95', 1, '2023-02-16 09:01:46', 'admin', '2023-02-16 09:01:46', null, null, null, 20, 'application_Product:update', 1, 'ca0159ab-16e4-7925-ae45-4e242ab88230');
+-- end application Online Store Employee Role
+
+-- start application Producer Group
+insert into SEC_GROUP
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, PARENT_ID, SYS_TENANT_ID)
+values ('f146a2f3-9373-df41-ed81-c0b16ba23932', 1, '2023-02-16 09:10:28', 'admin', '2023-02-16 09:10:28', null, null, null, 'Producer', '0fa2b1a5-1d68-4d69-9fbd-dff348347f93', null);
+-- end
+-- start application Store Group
+insert into SEC_GROUP
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, PARENT_ID, SYS_TENANT_ID)
+values ('a4069615-fff0-9686-f142-e9bc5c241ab7', 1, '2023-02-16 09:21:49', 'admin', '2023-02-16 09:21:49', null, null, null, 'Store', '0fa2b1a5-1d68-4d69-9fbd-dff348347f93', null);
+-- end
+-- start application Buyer Group
+insert into SEC_GROUP
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, PARENT_ID, SYS_TENANT_ID)
+values ('ed0c78a0-3412-caaf-e94b-12d067d6703c', 1, '2023-02-16 09:10:53', 'admin', '2023-02-16 09:10:53', null, null, null, 'Buyer', '0fa2b1a5-1d68-4d69-9fbd-dff348347f93', null);
+-- end
