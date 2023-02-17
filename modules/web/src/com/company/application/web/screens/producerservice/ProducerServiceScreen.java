@@ -41,7 +41,7 @@ public class ProducerServiceScreen extends Screen {
         return new ProducerOption(producerField2.getValue());
     }
 
-    @Subscribe("button1")
+    @Subscribe("getProductsButton")
     public void onButton1Click(Button.ClickEvent event) {
         if (producerPickerField1.isEmpty() || storePickerField.isEmpty() || countTextField.isEmpty()) {
             notifications.create(Notifications.NotificationType.WARNING).withCaption("Enter all required parameters.").show();
@@ -58,7 +58,7 @@ public class ProducerServiceScreen extends Screen {
         }
     }
 
-    @Subscribe("button2")
+    @Subscribe("getStoreButton")
     public void onButton2Click(Button.ClickEvent event) {
         if (producerField2.isEmpty() || productField.isEmpty()) {
             notifications.create(Notifications.NotificationType.WARNING).withCaption("Enter all required parameters.").show();
@@ -74,7 +74,7 @@ public class ProducerServiceScreen extends Screen {
         productField.setEnabled(false);
     }
 
-    @Subscribe("producerField2")
+    @Subscribe("producerField")
     public void onProducerField2ValueChange(HasValue.ValueChangeEvent<Producer> event) {
         productField.setEnabled(event.getValue() != null);
         if (event.getValue() == null) {
