@@ -31,8 +31,8 @@ public class StoreServiceScreen extends Screen {
     @Inject
     private PickerField<Retailer> retailerField;
 
-    @Subscribe("showStore")
-    public void onButton1Click(Button.ClickEvent event) {
+    @Subscribe("showStoreButton")
+    public void onShowStoreButtonClick(Button.ClickEvent event) {
         if (storeField.isEmpty()) {
             notifications.create(Notifications.NotificationType.WARNING).withCaption("Enter all required parameters.").show();
         } else {
@@ -48,7 +48,7 @@ public class StoreServiceScreen extends Screen {
     }
 
     @Subscribe("showRetailerButton")
-    public void onButton2Click(Button.ClickEvent event) {
+    public void onShowRetailerButtonClick(Button.ClickEvent event) {
         if (retailerField.isEmpty()) {
             notifications.create(Notifications.NotificationType.WARNING).withCaption("Enter all required parameters.").show();
         } else {

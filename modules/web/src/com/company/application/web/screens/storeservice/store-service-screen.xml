@@ -9,7 +9,7 @@
                     <column width="350px">
                         <pickerField id="storeField" metaClass="application_Store"
                                      caption="msg://storeField.caption" required="true"/>
-                        <button id="showStore" caption="msg://showButton.caption"/>
+                        <button id="showStoreButton" caption="msg://showButton.caption"/>
                         <label id="purchasesNumber1" value="msg://purchasesNumber.caption"/>
                     </column>
                 </form>
