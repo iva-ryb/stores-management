@@ -31,12 +31,16 @@ public class StoreEdit extends StandardEditor<Store> {
 
     @Subscribe
     public void onInit(InitEvent event) {
+        Integer quantity = productConfig.getCount();
         storeProductsTable.setStyleProvider(new Table.StyleProvider<StoreProduct>() {
+
             @Nullable
             @Override
             public String getStyleName(StoreProduct entity, @Nullable String property) {
-                if (entity.getCount() < productConfig.getCount()) {
-                    return "premium-grade";
+                if (property == null) {
+                    if (entity.getCount() < quantity) {
+                        return "premium-grade";
+                    }
                 }
                 return null;
             }

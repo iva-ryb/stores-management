@@ -47,11 +47,15 @@ public class RetailerEdit extends StandardEditor<Retailer> {
             request.setRestrictToCountryCode("ru");
 
             JOpenCageResponse response = jOpenCageGeocoder.forward(request);
-            JOpenCageLatLng firstResultLatLng = response.getFirstPosition();
+            try {
+                JOpenCageLatLng firstResultLatLng = response.getFirstPosition();
+                Point location = GeometryUtils.createPoint(firstResultLatLng.getLng(), firstResultLatLng.getLat());
+                store.setLocation(location);
+                dataManager.commit(store);
+            } catch (NullPointerException ex) {
+                throw new NullPointerException("null pointer ex");
+            }
 
-            Point location = GeometryUtils.createPoint(firstResultLatLng.getLng(), firstResultLatLng.getLat());
-            store.setLocation(location);
-            dataManager.commit(store);
         }
     }
 

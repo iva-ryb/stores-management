@@ -1,14 +1,13 @@
 package com.company.application.web.screens.store;
 
-import com.company.application.entity.Producer;
 import com.company.application.entity.Retailer;
+import com.company.application.entity.Store;
 import com.company.application.web.ProducerOption;
 import com.company.application.web.RetailerOption;
 import com.haulmont.cuba.core.global.DataManager;
 import com.haulmont.cuba.gui.model.CollectionContainer;
 import com.haulmont.cuba.gui.model.CollectionLoader;
 import com.haulmont.cuba.gui.screen.*;
-import com.company.application.entity.Store;
 
 import javax.inject.Inject;
 import java.util.ArrayList;

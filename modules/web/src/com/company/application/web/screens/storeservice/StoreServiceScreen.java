@@ -19,7 +19,7 @@ import javax.inject.Inject;
 @UiDescriptor("store-service-screen.xml")
 public class StoreServiceScreen extends Screen {
     @Inject
-    private PickerField<Store> storeField1;
+    private PickerField<Store> storeField;
     @Inject
     private StoreService storeService;
     @Inject
@@ -31,24 +31,24 @@ public class StoreServiceScreen extends Screen {
     @Inject
     private PickerField<Retailer> retailerField;
 
-    @Subscribe("button1")
-    public void onButton1Click(Button.ClickEvent event) {
-        if (storeField1.isEmpty()) {
+    @Subscribe("showStoreButton")
+    public void onShowStoreButtonClick(Button.ClickEvent event) {
+        if (storeField.isEmpty()) {
             notifications.create(Notifications.NotificationType.WARNING).withCaption("Enter all required parameters.").show();
         } else {
-            purchasesNumber1.setValue("The number of purchases: " + storeService.getNumberPurchasesInStore(storeField1.getValue()).toString());
+            purchasesNumber1.setValue("The number of purchases: " + storeService.getNumberPurchasesInStore(storeField.getValue()).toString());
         }
     }
 
-    @Subscribe("storeField1")
+    @Subscribe("storeField")
     public void onStoreField1ValueChange(HasValue.ValueChangeEvent<Store> event) {
         if (event.getValue() == null || !event.getValue().equals(event.getPrevValue())) {
             purchasesNumber1.setValue("The number of purchases: ");
         }
     }
 
-    @Subscribe("button2")
-    public void onButton2Click(Button.ClickEvent event) {
+    @Subscribe("showRetailerButton")
+    public void onShowRetailerButtonClick(Button.ClickEvent event) {
         if (retailerField.isEmpty()) {
             notifications.create(Notifications.NotificationType.WARNING).withCaption("Enter all required parameters.").show();
         } else {

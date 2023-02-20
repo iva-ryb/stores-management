@@ -26,7 +26,7 @@ public class ProducerServiceScreen extends Screen {
     @Inject
     private TextField<Integer> countTextField;
     @Inject
-    private PickerField<Producer> producerField2;
+    private PickerField<Producer> producerField;
     @Inject
     private PickerField<Product> productField;
     @Inject
@@ -38,10 +38,10 @@ public class ProducerServiceScreen extends Screen {
 
     @Install(to = "productField.lookup", subject = "screenOptionsSupplier")
     private ScreenOptions productFieldLookupScreenOptionsSupplier() {
-        return new ProducerOption(producerField2.getValue());
+        return new ProducerOption(producerField.getValue());
     }
 
-    @Subscribe("button1")
+    @Subscribe("getProductsButton")
     public void onButton1Click(Button.ClickEvent event) {
         if (producerPickerField1.isEmpty() || storePickerField.isEmpty() || countTextField.isEmpty()) {
             notifications.create(Notifications.NotificationType.WARNING).withCaption("Enter all required parameters.").show();
@@ -58,14 +58,14 @@ public class ProducerServiceScreen extends Screen {
         }
     }
 
-    @Subscribe("button2")
+    @Subscribe("getStoreButton")
     public void onButton2Click(Button.ClickEvent event) {
-        if (producerField2.isEmpty() || productField.isEmpty()) {
+        if (producerField.isEmpty() || productField.isEmpty()) {
             notifications.create(Notifications.NotificationType.WARNING).withCaption("Enter all required parameters.").show();
         } else {
             List<StoreWithNoSuchProduct> stores = storeWithNoSuchProductsDc.getMutableItems();
             stores.clear();
-            stores.addAll(producerService.getStoresWithNoSuchProduct(producerField2.getValue(), productField.getValue()));
+            stores.addAll(producerService.getStoresWithNoSuchProduct(producerField.getValue(), productField.getValue()));
         }
     }
 
@@ -74,7 +74,7 @@ public class ProducerServiceScreen extends Screen {
         productField.setEnabled(false);
     }
 
-    @Subscribe("producerField2")
+    @Subscribe("producerField")
     public void onProducerField2ValueChange(HasValue.ValueChangeEvent<Producer> event) {
         productField.setEnabled(event.getValue() != null);
         if (event.getValue() == null) {
