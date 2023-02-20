@@ -12,7 +12,5 @@ public interface ProductConfig extends Config {
 
     @Property("count of product in the store")
     @DefaultInteger(10)
-    int getCount();
-
-    void setCount(int count);
+    Integer getCount();
 }
