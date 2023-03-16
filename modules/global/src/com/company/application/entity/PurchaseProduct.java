@@ -31,6 +31,19 @@ public class PurchaseProduct extends StandardEntity {
     @JoinColumn(name = "PURCHASE_ID")
     private Purchase purchase;
 
+    @OnDeleteInverse(DeletePolicy.CASCADE)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "STORE_PRODUCT_ID")
+    private StoreProduct storeProduct;
+
+    public StoreProduct getStoreProduct() {
+        return storeProduct;
+    }
+
+    public void setStoreProduct(StoreProduct storeProduct) {
+        this.storeProduct = storeProduct;
+    }
+
     public Product getProduct() {
         return product;
     }

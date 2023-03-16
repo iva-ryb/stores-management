@@ -1,0 +1,1 @@
+alter table APPLICATION_PURCHASE_PRODUCT add column STORE_PRODUCT_ID uuid ;

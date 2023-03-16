@@ -29,5 +29,8 @@ public class StoreProductEdit extends StandardEditor<StoreProduct> {
         if (getEditedEntity().getPriceHistories() == null) {
             getEditedEntity().setPriceHistories(new ArrayList<>());
         }
+        if (getEditedEntity().getPurchaseProducts() == null) {
+            getEditedEntity().setPurchaseProducts(new ArrayList<>());
+        }
     }
 }

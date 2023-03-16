@@ -42,6 +42,18 @@ public class StoreProduct extends StandardEntity {
     @OnDeleteInverse(DeletePolicy.CASCADE)
     private List<PriceHistory> priceHistories;
 
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "storeProduct")
+    @JoinColumn(name = "PURCHASE_PRODUCTS_ID")
+    private List<PurchaseProduct> purchaseProducts;
+
+    public List<PurchaseProduct> getPurchaseProducts() {
+        return purchaseProducts;
+    }
+
+    public void setPurchaseProducts(List<PurchaseProduct> purchaseProducts) {
+        this.purchaseProducts = purchaseProducts;
+    }
+
     public void setPriceHistories(List<PriceHistory> priceHistories) {
         this.priceHistories = priceHistories;
     }

@@ -147,6 +147,7 @@ create table APPLICATION_PURCHASE_PRODUCT (
     PRODUCT_ID uuid not null,
     COUNT integer not null,
     PURCHASE_ID uuid,
+    STORE_PRODUCT_ID uuid,
     --
     primary key (ID)
 )^

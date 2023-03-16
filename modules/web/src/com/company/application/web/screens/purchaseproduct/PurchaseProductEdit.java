@@ -1,13 +1,13 @@
 package com.company.application.web.screens.purchaseproduct;
 
 import com.company.application.entity.Product;
+import com.company.application.entity.PurchaseProduct;
 import com.company.application.entity.StoreProduct;
 import com.company.application.web.StoreOption;
 import com.haulmont.cuba.gui.components.HasValue;
 import com.haulmont.cuba.gui.components.Label;
 import com.haulmont.cuba.gui.components.PickerField;
 import com.haulmont.cuba.gui.screen.*;
-import com.company.application.entity.PurchaseProduct;
 
 import javax.inject.Inject;
 
