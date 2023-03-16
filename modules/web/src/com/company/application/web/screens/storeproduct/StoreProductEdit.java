@@ -6,6 +6,7 @@ import com.haulmont.cuba.gui.components.PickerField;
 import com.haulmont.cuba.gui.screen.*;
 
 import javax.inject.Inject;
+import java.util.ArrayList;
 
 @UiController("application_StoreProduct.edit")
 @UiDescriptor("store-product-edit.xml")
@@ -20,6 +21,13 @@ public class StoreProductEdit extends StandardEditor<StoreProduct> {
     public void onAfterShow(AfterShowEvent event) {
         if(!productField.isEmpty()) {
             productField.setEditable(false);
+        }
+    }
+
+    @Subscribe
+    public void onBeforeCommitChanges(BeforeCommitChangesEvent event) {
+        if (getEditedEntity().getPriceHistories() == null) {
+            getEditedEntity().setPriceHistories(new ArrayList<>());
         }
     }
 }

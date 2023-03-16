@@ -1,0 +1,1 @@
+alter table APPLICATION_PRICE_HISTORY drop column STOREPRODUCT_ID__U75167 cascade ;

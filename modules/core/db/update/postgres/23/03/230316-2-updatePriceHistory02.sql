@@ -1,0 +1,4 @@
+alter table APPLICATION_PRICE_HISTORY rename column storeproduct_id to storeproduct_id__u75167 ;
+alter table APPLICATION_PRICE_HISTORY drop constraint FK_APPLICATION_PRICE_HISTORY_ON_STOREPRODUCT ;
+drop index IDX_APPLICATION_PRICE_HISTORY_ON_STOREPRODUCT ;
+alter table APPLICATION_PRICE_HISTORY add column STORE_PRODUCT_ID uuid ;

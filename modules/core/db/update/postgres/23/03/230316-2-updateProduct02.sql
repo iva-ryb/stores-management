@@ -1,0 +1,3 @@
+alter table APPLICATION_PRODUCT rename column pricehistory_id to pricehistory_id__u48428 ;
+alter table APPLICATION_PRODUCT drop constraint FK_APPLICATION_PRODUCT_ON_PRICEHISTORY ;
+drop index IDX_APPLICATION_PRODUCT_ON_PRICEHISTORY ;

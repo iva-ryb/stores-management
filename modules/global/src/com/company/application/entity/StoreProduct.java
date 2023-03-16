@@ -9,6 +9,7 @@ import com.haulmont.cuba.core.global.DeletePolicy;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
+import java.util.List;
 
 @PublishEntityChangedEvents
 @Table(name = "APPLICATION_STORE_PRODUCT")
@@ -35,6 +36,19 @@ public class StoreProduct extends StandardEntity {
     @NotNull
     @Column(name = "COUNT", nullable = false)
     private Integer count;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "storeProduct")
+    @JoinColumn(name = "PRICE_HISTORY_ID")
+    @OnDeleteInverse(DeletePolicy.CASCADE)
+    private List<PriceHistory> priceHistories;
+
+    public void setPriceHistories(List<PriceHistory> priceHistories) {
+        this.priceHistories = priceHistories;
+    }
+
+    public List<PriceHistory> getPriceHistories() {
+        return priceHistories;
+    }
 
     public Store getStore() {
         return store;

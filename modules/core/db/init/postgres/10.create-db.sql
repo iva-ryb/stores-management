@@ -10,13 +10,13 @@ create table APPLICATION_STORE (
     DELETED_BY varchar(50),
     --
     CITY varchar(255),
-    LOCATION VARCHAR(100),
     STREET varchar(255),
     BUILDING varchar(255),
     --
     NUMBER varchar(255) not null,
     NAME varchar(255) not null,
     RETAILER_ID uuid not null,
+    LOCATION VARCHAR(100),
     --
     primary key (ID)
 )^
@@ -68,9 +68,10 @@ create table APPLICATION_PRICE_HISTORY (
     DELETED_BY varchar(50),
     --
     PRICE decimal(19, 2) not null,
-    DATE date not null,
+    DATE timestamp not null,
     PRODUCT_ID uuid not null,
     STORE_ID uuid not null,
+    STORE_PRODUCT_ID uuid not null,
     --
     primary key (ID)
 )^

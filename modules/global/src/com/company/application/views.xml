@@ -43,12 +43,8 @@
         <property name="product" view="_minimal">
             <property name="priceFromProducer"/>
         </property>
-        <property name="store" view="_minimal">
-            <property name="storeProducts" view="_minimal">
-                <property name="store" view="store-view"/>
-                <property name="product" view="product-view"/>
-            </property>
-        </property>
+        <property name="store" view="store-view"/>
+        <property name="priceHistories" view="_minimal"/>
     </view>
     <view entity="application_Purchase" name="purchase-view" extends="_local">
         <property name="store" view="_minimal">
@@ -75,5 +71,8 @@
     <view entity="application_ProductWhoseAmountIsLessThan" name="productWhoseAmountIsLessThan-view" extends="_local">
         <property name="product" view="_minimal"/>
         <property name="count"/>
+    </view>
+    <view entity="application_PriceHistory" name="priceHistory_view" extends="_local">
+        <property name="store" view="store-view"/>
     </view>
 </views>

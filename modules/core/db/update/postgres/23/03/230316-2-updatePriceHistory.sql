@@ -1,0 +1,1 @@
+alter table APPLICATION_PRICE_HISTORY add column STOREPRODUCT_ID uuid ;
