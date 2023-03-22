@@ -1,0 +1,1 @@
+alter table APPLICATION_PURCHASE_PRODUCT drop column STORE_PRODUCT_ID__U55549 cascade ;

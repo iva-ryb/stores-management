@@ -1,0 +1,1 @@
+alter table application_shop drop constraint FK_APPLICATION_SHOP_ON_STORE_CHAIN ;

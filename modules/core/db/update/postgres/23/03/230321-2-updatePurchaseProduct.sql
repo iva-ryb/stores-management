@@ -1,0 +1,3 @@
+alter table APPLICATION_PURCHASE_PRODUCT rename column store_product_id to store_product_id__u55549 ;
+alter table APPLICATION_PURCHASE_PRODUCT drop constraint FK_APPLICATION_PURCHASE_PRODUCT_ON_STORE_PRODUCT ;
+drop index IDX_APPLICATION_PURCHASE_PRODUCT_ON_STORE_PRODUCT ;

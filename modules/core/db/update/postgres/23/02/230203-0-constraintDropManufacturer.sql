@@ -1,0 +1,1 @@
+alter table application_product drop constraint FK_APPLICATION_PRODUCT_ON_MANUFACTURER ;

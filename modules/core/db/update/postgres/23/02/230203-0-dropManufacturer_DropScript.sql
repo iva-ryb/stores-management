@@ -1,0 +1,1 @@
+drop table if exists APPLICATION_MANUFACTURER__U39749 cascade ;
