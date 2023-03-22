@@ -1,1 +1,0 @@
-alter table application_list_of_products rename to APPLICATION_LIST_OF_PRODUCTS__U88949 ;

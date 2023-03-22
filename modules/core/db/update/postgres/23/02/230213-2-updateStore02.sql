@@ -1,1 +1,0 @@
-alter table APPLICATION_STORE add column LOCATION VARCHAR(100) ;

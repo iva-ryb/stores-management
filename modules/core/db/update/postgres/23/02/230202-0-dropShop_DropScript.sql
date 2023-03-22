@@ -1,1 +1,0 @@
-drop table if exists APPLICATION_SHOP__U04190 cascade ;

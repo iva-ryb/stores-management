@@ -1,1 +1,0 @@
-alter table application_store drop constraint FK_APPLICATION_STORE_ON_RETAILER ;

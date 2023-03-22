@@ -1,1 +1,0 @@
-drop table if exists APPLICATION_MANUFACTURER__U28684 cascade ;

@@ -1,1 +1,0 @@
-drop table if exists APPLICATION_ADRESS__U66476 cascade ;
