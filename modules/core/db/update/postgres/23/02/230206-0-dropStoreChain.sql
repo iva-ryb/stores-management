@@ -1,1 +1,0 @@
-alter table application_store_chain rename to APPLICATION_STORE_CHAIN__U62312 ;

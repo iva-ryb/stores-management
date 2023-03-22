@@ -1,1 +1,0 @@
-alter table APPLICATION_PRICE_HISTORY drop column DATE_OF_PRICE_CHANGE__U11062 cascade ;

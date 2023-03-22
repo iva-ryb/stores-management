@@ -1,1 +1,0 @@
-drop table if exists APPLICATION_RETAILER__U70728 cascade ;

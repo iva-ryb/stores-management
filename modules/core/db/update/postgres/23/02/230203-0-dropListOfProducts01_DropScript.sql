@@ -1,1 +1,0 @@
-drop table if exists APPLICATION_LIST_OF_PRODUCTS__U88949 cascade ;

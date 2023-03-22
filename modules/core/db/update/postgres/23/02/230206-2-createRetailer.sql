@@ -1,1 +1,0 @@
-create unique index IDX_APPLICATION_RETAILER_UK_NAME on APPLICATION_RETAILER (NAME) where DELETE_TS is null ;

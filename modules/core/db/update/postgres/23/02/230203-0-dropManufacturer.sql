@@ -1,1 +1,0 @@
-alter table application_manufacturer rename to APPLICATION_MANUFACTURER__U39749 ;
