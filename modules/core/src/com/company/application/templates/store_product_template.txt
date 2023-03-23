@@ -1,0 +1,3 @@
+Store Product:
+${storeProduct.getProduct().getName()}
+${storeProduct.getCount()}
